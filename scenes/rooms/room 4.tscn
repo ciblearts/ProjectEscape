@@ -1,0 +1,76 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://assests/Environment/wall 4.png" type="Texture" id=1]
+[ext_resource path="res://scenes/machines/door1.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assests/Environment/background wall 2.png" type="Texture" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 33.5186, 862.009 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 33.1976, 480.838 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 735.58, 37.502 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 1370.77, 36.1398 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 34.453, 192.307 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 442.173, 37.1676 )
+
+[sub_resource type="OccluderPolygon2D" id=7]
+cull_mode = 1
+polygon = PoolVector2Array( -1059.61, -703.031, 1737.81, -702.001, 1738.51, 1072.45, 356.215, 1071.81, 352.673, 173.12, -1062.75, 173.12, -1059.42, -703.031, -990.005, -629.031, -987.692, 98.6337, 356.159, 98.2231, 348.803, -646.259, 420.316, -646.259, 425.19, 998.676, 1668.64, 997.36, 1668.84, -628.865, -990.005, -629.171 )
+
+[node name="room 4" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 352.398, 186.878 )
+z_index = -1
+texture = ExtResource( 3 )
+
+[node name="wall 4" type="Sprite" parent="."]
+position = Vector2( 339.711, 185.108 )
+z_index = 2
+texture = ExtResource( 1 )
+
+[node name="door2" parent="." instance=ExtResource( 2 )]
+position = Vector2( -1065.31, -104.653 )
+rotation = 3.14159
+
+[node name="door1" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1462.08, 1074.98 )
+rotation = 1.5708
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 1700.37, 170.766 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 390.604, 592.638 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( -322.985, 135.032 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 343.984, -665.991 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( -1025.39, -507.553 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 802.253, 1037.63 )
+shape = SubResource( 6 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+occluder = SubResource( 7 )

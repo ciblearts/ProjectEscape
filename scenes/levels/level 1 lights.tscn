@@ -1,0 +1,168 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://scenes/levels/level 1 chests.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/objects/lamp_1.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/objects/lamp_2.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/objects/lamp_3.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/objects/lamp_4.tscn" type="PackedScene" id=5]
+
+[node name="level 1 lights" type="Node2D"]
+
+[node name="level 1 chests" parent="." instance=ExtResource( 1 )]
+position = Vector2( 213.667, 554.748 )
+
+[node name="lamp_1" parent="level 1 chests" instance=ExtResource( 3 )]
+position = Vector2( 17392.3, 1215.53 )
+
+[node name="lamp_4" parent="level 1 chests" instance=ExtResource( 5 )]
+position = Vector2( 12733.6, 1048.51 )
+
+[node name="lamp_5" parent="level 1 chests" instance=ExtResource( 5 )]
+position = Vector2( 10064.9, 7596.09 )
+
+[node name="lamp_2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 3715.15, 1194.6 )
+
+[node name="lamp_4" parent="lamp_2" instance=ExtResource( 5 )]
+position = Vector2( 13685.9, 10700.5 )
+
+[node name="lamp_5" parent="lamp_2" instance=ExtResource( 5 )]
+position = Vector2( 11292.9, 8052.89 )
+
+[node name="lamp_6" parent="lamp_2" instance=ExtResource( 5 )]
+position = Vector2( 8856.98, 4553.58 )
+
+[node name="lamp_3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 8706.94, 5105.82 )
+
+[node name="lamp_23" parent="." instance=ExtResource( 2 )]
+position = Vector2( 16133.2, 9159.04 )
+
+[node name="lamp_24" parent="." instance=ExtResource( 3 )]
+position = Vector2( 5503.11, 9738.26 )
+
+[node name="lamp_25" parent="." instance=ExtResource( 4 )]
+position = Vector2( 5944.69, 1804.05 )
+
+[node name="lamp_26" parent="." instance=ExtResource( 2 )]
+position = Vector2( 7065.87, 11248.9 )
+
+[node name="lamp_27" parent="." instance=ExtResource( 3 )]
+position = Vector2( 3105.75, 2386.61 )
+
+[node name="lamp_28" parent="." instance=ExtResource( 2 )]
+position = Vector2( 9475.28, 5083.7 )
+
+[node name="lamp_29" parent="." instance=ExtResource( 3 )]
+position = Vector2( 3613.69, 8160.61 )
+
+[node name="lamp_15" parent="." instance=ExtResource( 4 )]
+position = Vector2( 8853.49, 6615.01 )
+
+[node name="lamp_21" parent="." instance=ExtResource( 4 )]
+position = Vector2( 13265.2, 7277.68 )
+
+[node name="lamp_16" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2838.57, 9568.58 )
+
+[node name="lamp_17" parent="." instance=ExtResource( 4 )]
+position = Vector2( 6335.87, 11244.7 )
+
+[node name="lamp_37" parent="." instance=ExtResource( 5 )]
+position = Vector2( 11335.3, 1387.76 )
+
+[node name="lamp_39" parent="." instance=ExtResource( 5 )]
+position = Vector2( 14479.1, 6676.48 )
+
+[node name="lamp_41" parent="." instance=ExtResource( 5 )]
+position = Vector2( 10727.5, 11172.7 )
+
+[node name="lamp_42" parent="." instance=ExtResource( 5 )]
+position = Vector2( 3269.08, 11413.5 )
+
+[node name="lamp_43" parent="." instance=ExtResource( 5 )]
+position = Vector2( 3497.5, 6920.68 )
+
+[node name="lamp_44" parent="." instance=ExtResource( 5 )]
+position = Vector2( 3943.75, 4354.58 )
+
+[node name="lamp_40" parent="." instance=ExtResource( 5 )]
+position = Vector2( 15032.2, 11415.6 )
+
+[node name="lamp_38" parent="." instance=ExtResource( 5 )]
+position = Vector2( 15867.7, 1499 )
+
+[node name="lamp_18" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1853.28, 1679.64 )
+
+[node name="lamp_4" parent="." instance=ExtResource( 2 )]
+position = Vector2( 14255.3, 11408 )
+
+[node name="lamp_5" parent="." instance=ExtResource( 2 )]
+position = Vector2( 14865.5, 5052.57 )
+
+[node name="lamp_6" parent="." instance=ExtResource( 2 )]
+position = Vector2( 18093.6, 8008.89 )
+
+[node name="lamp_7" parent="." instance=ExtResource( 2 )]
+position = Vector2( 2499.05, 4886.9 )
+
+[node name="lamp_31" parent="." instance=ExtResource( 3 )]
+position = Vector2( 3459.75, 3574.12 )
+
+[node name="lamp_30" parent="." instance=ExtResource( 4 )]
+position = Vector2( 7681.71, 9792.29 )
+
+[node name="lamp_8" parent="." instance=ExtResource( 3 )]
+position = Vector2( 6555.67, 6226.62 )
+
+[node name="lamp_10" parent="." instance=ExtResource( 3 )]
+position = Vector2( 16734.5, 10448 )
+
+[node name="lamp_11" parent="." instance=ExtResource( 3 )]
+position = Vector2( 6701.38, 8099.14 )
+
+[node name="lamp_12" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1808.25, 3629.98 )
+
+[node name="lamp_9" parent="." instance=ExtResource( 2 )]
+position = Vector2( 9116.84, 8114.51 )
+
+[node name="lamp_13" parent="." instance=ExtResource( 2 )]
+position = Vector2( 11501.7, 8281.29 )
+
+[node name="lamp_1" parent="." instance=ExtResource( 3 )]
+position = Vector2( 5652.01, 4977.14 )
+
+[node name="lamp_14" parent="." instance=ExtResource( 4 )]
+position = Vector2( 12462.2, 3429 )
+
+[node name="lamp_19" parent="." instance=ExtResource( 4 )]
+position = Vector2( 8132.81, 2210.53 )
+
+[node name="lamp_20" parent="." instance=ExtResource( 3 )]
+position = Vector2( 14600.5, 3722.45 )
+
+[node name="lamp_22" parent="." instance=ExtResource( 4 )]
+position = Vector2( 11881.1, 6713.24 )
+
+[node name="lamp_32" parent="." instance=ExtResource( 5 )]
+position = Vector2( 2726.67, 7976.07 )
+
+[node name="lamp_35" parent="." instance=ExtResource( 5 )]
+position = Vector2( 15063.6, 2469.71 )
+
+[node name="lamp_36" parent="." instance=ExtResource( 5 )]
+position = Vector2( 5226.76, 2306.24 )
+
+[node name="lamp_33" parent="." instance=ExtResource( 5 )]
+position = Vector2( 7616.81, 6665.57 )
+
+[node name="lamp_34" parent="." instance=ExtResource( 4 )]
+position = Vector2( 16650.9, 6672.07 )
+
+[node name="lamp_45" parent="." instance=ExtResource( 5 )]
+position = Vector2( 9459.37, 3990.89 )
+
+[node name="lamp_1" parent="lamp_45" instance=ExtResource( 3 )]
+position = Vector2( 8626.19, 896.25 )

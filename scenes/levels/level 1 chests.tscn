@@ -1,0 +1,103 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://scenes/levels/level 1 objects.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/machines/weapon_box1.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/machines/cupboard1.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/levels/level 1 chests.gd" type="Script" id=4]
+[ext_resource path="res://scenes/machines/locker1.tscn" type="PackedScene" id=5]
+
+[node name="level 1 chests" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="level 1 objects" parent="." instance=ExtResource( 1 )]
+position = Vector2( 232.33, 83.6406 )
+
+[node name="locker6" parent="." instance=ExtResource( 5 )]
+position = Vector2( 10292.9, 3476.21 )
+
+[node name="locker5" parent="." instance=ExtResource( 5 )]
+position = Vector2( 7032.05, 1626.58 )
+
+[node name="weapon_box3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 5403.28, 6600.05 )
+
+[node name="weapon_box2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 2472.52, 3546.45 )
+
+[node name="locker8" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1237.57, 2134.29 )
+
+[node name="weapon_box1" parent="." instance=ExtResource( 2 )]
+position = Vector2( 10242, 4983.37 )
+
+[node name="weapon_box5" parent="." instance=ExtResource( 2 )]
+position = Vector2( 15194.5, 9987.3 )
+
+[node name="cupboard6" parent="." instance=ExtResource( 3 )]
+position = Vector2( 17410.1, 10988.3 )
+
+[node name="weapon_box6" parent="." instance=ExtResource( 2 )]
+position = Vector2( 12117.2, 11220.3 )
+
+[node name="locker4" parent="." instance=ExtResource( 5 )]
+position = Vector2( 12701.7, 8573 )
+
+[node name="weapon_box16" parent="." instance=ExtResource( 2 )]
+position = Vector2( 15674, 2447.72 )
+
+[node name="weapon_box15" parent="." instance=ExtResource( 2 )]
+position = Vector2( 3218.97, 4501.85 )
+
+[node name="cupboard3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 4730.72, 3531.56 )
+
+[node name="weapon_box7" parent="." instance=ExtResource( 2 )]
+position = Vector2( 16449.3, 11310.2 )
+
+[node name="weapon_box8" parent="." instance=ExtResource( 2 )]
+position = Vector2( 9808.26, 1804.77 )
+
+[node name="locker2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 17671.1, 6519.31 )
+
+[node name="cupboard2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 15741.6, 7918.89 )
+
+[node name="locker3" parent="." instance=ExtResource( 5 )]
+position = Vector2( 15524.3, 6422.71 )
+
+[node name="cupboard" parent="." instance=ExtResource( 3 )]
+position = Vector2( 6638.17, 4955.54 )
+
+[node name="weapon_box9" parent="." instance=ExtResource( 2 )]
+position = Vector2( 3811.3, 2298.47 )
+
+[node name="cupboard5" parent="." instance=ExtResource( 3 )]
+position = Vector2( 7687.01, 11067.7 )
+
+[node name="weapon_box10" parent="." instance=ExtResource( 2 )]
+position = Vector2( 11781.2, 9808.94 )
+
+[node name="weapon_box11" parent="." instance=ExtResource( 2 )]
+position = Vector2( 6461.86, 3459.16 )
+
+[node name="weapon_box12" parent="." instance=ExtResource( 2 )]
+position = Vector2( 10527.5, 9035.77 )
+
+[node name="weapon_box13" parent="." instance=ExtResource( 2 )]
+position = Vector2( 8850.66, 9810 )
+
+[node name="weapon_box14" parent="." instance=ExtResource( 2 )]
+position = Vector2( 3841.59, 11442.2 )
+
+[node name="weapon_box4" parent="." instance=ExtResource( 2 )]
+position = Vector2( 2605.67, 11139.6 )
+
+[node name="locker" parent="." instance=ExtResource( 5 )]
+position = Vector2( 5951.35, 11286.3 )
+
+[node name="cupboard4" parent="." instance=ExtResource( 3 )]
+position = Vector2( 8762.5, 11619.7 )
+
+[node name="locker7" parent="." instance=ExtResource( 5 )]
+position = Vector2( 10723.8, 11423.4 )
