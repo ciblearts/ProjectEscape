@@ -227,9 +227,6 @@ position = Vector2( 17552.6, 2812.62 )
 [node name="Cone3" parent="." instance=ExtResource( 12 )]
 position = Vector2( 8318.84, 10851.3 )
 
-[node name="Cone4" parent="." instance=ExtResource( 12 )]
-position = Vector2( 13363.2, 11177.8 )
-
 [node name="television2" parent="." instance=ExtResource( 2 )]
 position = Vector2( 12170.9, 1776.87 )
 
