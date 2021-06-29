@@ -132,7 +132,7 @@ position = Vector2( 9116.84, 8114.51 )
 position = Vector2( 11501.7, 8281.29 )
 
 [node name="lamp_1" parent="." instance=ExtResource( 3 )]
-position = Vector2( 5652.01, 4977.14 )
+position = Vector2( 5139.7, 4869.26 )
 
 [node name="lamp_14" parent="." instance=ExtResource( 4 )]
 position = Vector2( 12462.2, 3429 )

@@ -21,3 +21,5 @@ func _process(_delta):
 			Player.Picked = 0
 		ACCESS = false
 
+func _on_Timer_timeout():
+	pass # Replace with function body.

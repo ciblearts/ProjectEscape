@@ -6,6 +6,7 @@
 extents = Vector2( 167.81, 212.986 )
 
 [sub_resource type="OccluderPolygon2D" id=2]
+cull_mode = 1
 polygon = PoolVector2Array( -168.133, -212.344, 166.252, -212.475, 166.376, 211.969, -167.732, 211.095 )
 
 [node name="washingmachine" type="RigidBody2D"]

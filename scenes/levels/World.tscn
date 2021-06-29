@@ -20,7 +20,7 @@ position = Vector2( -464.201, -104.701 )
 
 [node name="bg2" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
-volume_db = -5.0
+volume_db = -10.0
 autoplay = true
 
 [node name="bot3" parent="." instance=ExtResource( 6 )]
@@ -39,4 +39,4 @@ position = Vector2( 13711.6, 10389.3 )
 position = Vector2( 15732.8, 2799.76 )
 
 [node name="gameboy" parent="." instance=ExtResource( 1 )]
-position = Vector2( 6348.3, 5045.63 )
+position = Vector2( 4968.03, 6765.31 )

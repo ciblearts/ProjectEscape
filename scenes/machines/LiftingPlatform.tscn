@@ -21,6 +21,8 @@ texture = ExtResource( 2 )
 [node name="platform" type="KinematicBody2D" parent="."]
 
 [node name="mover" type="Sprite" parent="platform"]
+light_mask = 17
+z_index = 1
 texture = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="platform"]

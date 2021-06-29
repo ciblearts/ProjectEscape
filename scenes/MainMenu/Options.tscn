@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scenes/MainMenu/Text.tscn" type="PackedScene" id=1]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Text" parent="." instance=ExtResource( 1 )]
+margin_left = 452.0
+margin_top = 135.0
+margin_right = 821.0
+margin_bottom = 406.0
+rect_scale = Vector2( 3, 3 )
+text = "Controls:
+LEFT				A, Left
+RIGHT				D, Right
+JUMP				w, Space 
+ACTION 			E
+CARDBOARD 			C
+SPRINT 			SHIFT
+
+Tips:
+Player can access only one machine at a time, move out of range and inside to access unaccessible machines
+Loots contain either a bullet or vest
+The portal of victory is in one of the three loots"

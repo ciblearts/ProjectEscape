@@ -22,3 +22,11 @@ func _on_DefaultButton_pressed():
 
 func _on_DefaultButton3_pressed():
 	get_tree().change_scene("res://scenes/levels/Practice level.tscn")
+
+
+func _on_DefaultButton7_pressed():
+	get_tree().change_scene("res://scenes/MainMenu/Story.tscn")
+
+
+func _on_Options_pressed():
+	get_tree().change_scene("res://scenes/MainMenu/Options.tscn")

@@ -6,6 +6,7 @@
 extents = Vector2( 185.647, 176.715 )
 
 [sub_resource type="OccluderPolygon2D" id=2]
+cull_mode = 1
 polygon = PoolVector2Array( -186.208, -168.3, -177.218, -177.009, 177.602, -177.217, 184.907, -166.968, 184.528, 160.568, 181.219, 170.829, 172.233, 174.141, -179.1, 174.138, -185.59, 169.596 )
 
 [node name="oven" type="RigidBody2D"]

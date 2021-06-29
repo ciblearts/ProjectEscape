@@ -2,7 +2,7 @@
 
 [ext_resource path="res://assests/Objects/Locker Open.png" type="Texture" id=1]
 [ext_resource path="res://sounds/LockerOpen.wav" type="AudioStream" id=2]
-[ext_resource path="res://script/weapon_box.gd" type="Script" id=3]
+[ext_resource path="res://scenes/machines/portal.gd" type="Script" id=3]
 [ext_resource path="res://assests/Objects/Locker Closed.png" type="Texture" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -10,13 +10,18 @@ extents = Vector2( 92.4262, 289.795 )
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 4 ) ],
+"loop": false,
+"name": "close",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 4 ), ExtResource( 1 ) ],
 "loop": false,
-"name": "default",
+"name": "open",
 "speed": 5.0
 } ]
 
-[node name="locker1" type="Area2D" groups=[
+[node name="portal" type="Area2D" groups=[
 "machines",
 ]]
 script = ExtResource( 3 )
@@ -32,6 +37,10 @@ volume_db = -10.0
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 z_index = -1
 frames = SubResource( 2 )
+animation = "close"
+frame = 1
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 15.0
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

@@ -49,14 +49,14 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ) ],
-"loop": true,
-"name": "walk",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 1 ) ],
 "loop": true,
 "name": "jump",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ) ],
+"loop": true,
+"name": "walk",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 4 ), SubResource( 5 ) ],
@@ -169,7 +169,7 @@ position = Vector2( 7.25085, -6.85242 )
 shape = SubResource( 11 )
 
 [node name="ShakingCamera" parent="." instance=ExtResource( 14 )]
-zoom = Vector2( 3, 3 )
+zoom = Vector2( 2.5, 2.5 )
 
 [node name="gun" parent="." instance=ExtResource( 7 )]
 position = Vector2( -0.813179, 56.1876 )

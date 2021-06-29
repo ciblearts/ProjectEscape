@@ -34,7 +34,7 @@ position = Vector2( 13080.6, 5646.08 )
 position = Vector2( 17167.1, 9816.63 )
 
 [node name="wooden barral2" parent="." instance=ExtResource( 11 )]
-position = Vector2( 6927.48, 2923.68 )
+position = Vector2( 6552.9, 3058.53 )
 
 [node name="wooden barral" parent="." instance=ExtResource( 11 )]
 position = Vector2( 4321.95, 2141.31 )
@@ -67,13 +67,13 @@ position = Vector2( 4525.96, 6390.59 )
 position = Vector2( 7217.15, 6158.77 )
 
 [node name="football6" parent="." instance=ExtResource( 6 )]
-position = Vector2( 5185.73, 7908.87 )
+position = Vector2( 11025.7, 6292.87 )
 
 [node name="oil_barrel" parent="." instance=ExtResource( 4 )]
 position = Vector2( 6969.09, 7801.55 )
 
 [node name="refridgerator2" parent="." instance=ExtResource( 17 )]
-position = Vector2( 10746.1, 1506.69 )
+position = Vector2( 11151.9, 1196.23 )
 
 [node name="oil_barrel2" parent="." instance=ExtResource( 4 )]
 position = Vector2( 12491.3, 1786.06 )
@@ -87,23 +87,20 @@ position = Vector2( 17570.9, 3333.4 )
 [node name="oil_barrel5" parent="." instance=ExtResource( 4 )]
 position = Vector2( 12800.6, 7891.83 )
 
-[node name="wooden box white2" parent="." instance=ExtResource( 5 )]
-position = Vector2( 6072.74, 6161.11 )
-
 [node name="wooden box yellow2" parent="." instance=ExtResource( 7 )]
 position = Vector2( 8961.5, 1414.13 )
 
 [node name="platform7" parent="." instance=ExtResource( 20 )]
 position = Vector2( 8614.6, 11012.6 )
 
+[node name="platform13" parent="." instance=ExtResource( 20 )]
+position = Vector2( 10116.9, 9134.58 )
+
 [node name="platform" parent="." instance=ExtResource( 3 )]
 position = Vector2( 9657.51, 10903.9 )
 
-[node name="platform2" parent="platform" instance=ExtResource( 20 )]
-position = Vector2( 459.38, -1769.32 )
-
 [node name="platform2" parent="." instance=ExtResource( 3 )]
-position = Vector2( 4536.4, 6266.17 )
+position = Vector2( 5035.51, 5678.96 )
 
 [node name="LiftingPlatform3" parent="." instance=ExtResource( 15 )]
 position = Vector2( 1841.97, 7775.77 )
@@ -114,14 +111,29 @@ position = Vector2( 9820.68, 8915.04 )
 [node name="platform8" parent="." instance=ExtResource( 20 )]
 position = Vector2( 17247.3, 11050.6 )
 
+[node name="refridgerator5" parent="." instance=ExtResource( 17 )]
+position = Vector2( 7785.94, 2668.65 )
+
+[node name="refridgerator6" parent="." instance=ExtResource( 17 )]
+position = Vector2( 7784.58, 3403.05 )
+
+[node name="LiftingPlatform5" parent="." instance=ExtResource( 15 )]
+position = Vector2( 2379.12, 10815.5 )
+
 [node name="platform3" parent="." instance=ExtResource( 3 )]
-position = Vector2( 11197.5, 9473.54 )
+position = Vector2( 11189.5, 8741.54 )
 
 [node name="fan4" parent="." instance=ExtResource( 13 )]
 position = Vector2( 9239.77, 11562.1 )
 
+[node name="Cone5" parent="." instance=ExtResource( 12 )]
+position = Vector2( 9200.17, 1465.67 )
+
+[node name="oven" parent="." instance=ExtResource( 1 )]
+position = Vector2( 11556.3, 11104.7 )
+
 [node name="ladder3" parent="." instance=ExtResource( 9 )]
-position = Vector2( 11164.6, 803.012 )
+position = Vector2( 10742.4, 919.647 )
 
 [node name="ladder4" parent="." instance=ExtResource( 9 )]
 position = Vector2( 3493.19, 10585.5 )
@@ -141,21 +153,22 @@ position = Vector2( 3622.16, 9420.67 )
 [node name="television" parent="." instance=ExtResource( 2 )]
 position = Vector2( 9912.77, 9707.85 )
 
+[node name="washingmachine2" parent="." instance=ExtResource( 18 )]
+position = Vector2( 10770.4, 1645.13 )
+scale = Vector2( 1.01005, 0.997366 )
+
+[node name="television4" parent="." instance=ExtResource( 2 )]
+position = Vector2( 12775.3, 9843.86 )
+scale = Vector2( 1.01005, 0.997366 )
+
+[node name="radio" parent="." instance=ExtResource( 19 )]
+position = Vector2( 13115.3, 9952.28 )
+
 [node name="television3" parent="." instance=ExtResource( 2 )]
 position = Vector2( 6117.17, 5815.45 )
 
-[node name="radio" parent="television3" instance=ExtResource( 19 )]
-position = Vector2( 6998.16, 4136.83 )
-
-[node name="television" parent="television3/radio" instance=ExtResource( 2 )]
-position = Vector2( -340.001, -108.418 )
-scale = Vector2( 1.01005, 0.997366 )
-
-[node name="washingmachine" parent="television3/radio/television" instance=ExtResource( 18 )]
-position = Vector2( -1594.38, -8223.73 )
-
 [node name="wooden box white" parent="." instance=ExtResource( 5 )]
-position = Vector2( 6542.42, 3365.01 )
+position = Vector2( 6554.41, 3365.01 )
 
 [node name="fan2" parent="." instance=ExtResource( 10 )]
 position = Vector2( 13256.6, 8696.86 )
@@ -173,7 +186,7 @@ position = Vector2( 14078.9, 1998.29 )
 position = Vector2( 14078.9, 2336.74 )
 
 [node name="football7" parent="." instance=ExtResource( 6 )]
-position = Vector2( 6148.09, 2670.04 )
+position = Vector2( 5600.64, 3092.9 )
 
 [node name="Cone2" parent="." instance=ExtResource( 12 )]
 position = Vector2( 9889.27, 6680.1 )
@@ -229,8 +242,29 @@ position = Vector2( 4984.61, 8127.43 )
 [node name="washingmachine" parent="." instance=ExtResource( 18 )]
 position = Vector2( 6887.24, 3298.39 )
 
-[node name="Cone5" parent="." instance=ExtResource( 12 )]
-position = Vector2( 11592.1, 9764.39 )
-
 [node name="platform6" parent="." instance=ExtResource( 20 )]
 position = Vector2( 15698.7, 2562.57 )
+
+[node name="platform10" parent="." instance=ExtResource( 3 )]
+position = Vector2( 12827.6, 4895.25 )
+
+[node name="fan8" parent="." instance=ExtResource( 10 )]
+position = Vector2( 4955.94, 6581.34 )
+
+[node name="platform11" parent="." instance=ExtResource( 3 )]
+position = Vector2( 5022.77, 4670.22 )
+
+[node name="platform14" parent="." instance=ExtResource( 3 )]
+position = Vector2( 5021.01, 5009.04 )
+
+[node name="platform12" parent="." instance=ExtResource( 3 )]
+position = Vector2( 5028.83, 5350.31 )
+
+[node name="platform15" parent="." instance=ExtResource( 3 )]
+position = Vector2( 5615.22, 2589.06 )
+
+[node name="refridgerator4" parent="." instance=ExtResource( 17 )]
+position = Vector2( 6172.82, 3157.36 )
+
+[node name="Clock3" parent="." instance=ExtResource( 14 )]
+position = Vector2( 14993.7, 3214.41 )
