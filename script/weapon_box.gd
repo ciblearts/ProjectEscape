@@ -14,7 +14,10 @@ func _process(_delta):
 			yield(get_tree().create_timer(5),"timeout")
 			$AnimatedSprite.play()
 			if is_instance_valid(Player):
-				Player.Picked = Player.Picked + 1
+				if Player.VEST == true:
+					Player.Picked = Player.Picked + 1
+				else:
+					Player.vest(true)
 		if closed == false:
 			pass
 		if is_instance_valid(Player) && Player.ACCESS == false:

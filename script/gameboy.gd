@@ -9,6 +9,7 @@ var ALIVE = true
 var action = false
 var ACCESS = false
 var WIN = false
+var VEST = true
 
 var Picked = 0
 var SPEED = 350
@@ -23,14 +24,17 @@ func _ready():
 
 func _physics_process(_delta):
 	if ALIVE == false:
+		#print("game over")
+		#$ShakingCamera.
+		queue_free()
 		var _new_scene = get_tree().change_scene("res://scenes/levels/game over.tscn")
 		return
 	if WIN == true:
+		queue_free()
 		var _new_scene = get_tree().change_scene("res://scenes/levels/WeaponBoxWin.tscn")
 		return
 
 	if Picked>0 :
-		print(Picked)
 		$SoundReload.play()
 		gun.bullets = gun.bullets + Picked
 		Picked = 0
@@ -65,7 +69,7 @@ func _physics_process(_delta):
 			pass
 		velocity.y = lerp(velocity.y,0,0.2)
 		velocity = move_and_slide(velocity, Vector2.UP, false, 4, 0.785398, false)
-	
+
 	if Input.is_action_just_pressed("cover"):
 		if cover == false:
 			$gun/Light2D.hide()
@@ -145,7 +149,19 @@ func fall_y_reset():
 	var player_instance = get_node(".")
 	player_instance.position.y = 0
 
+func vest(flag):
+	if flag == true:
+		VEST = true
+		$vest.show()
+		$SoundVest.play()
+	elif flag == false:
+		$ShakingCamera.set_shake(1)
+		VEST = false
+		$vest.hide()
+		$SoundVestBullet.play()
+
 func _on_right_resetter_body_entered(_body):
+	print("right")
 	fall_left_reset()
 
 func _on_down_resetter_body_entered(_body):
@@ -153,6 +169,7 @@ func _on_down_resetter_body_entered(_body):
 	fall_y_reset()
 
 func _on_left_resetter_body_entered(_body):
+	print("left")
 	fall_right_reset()
 
 func _on_Access_range_area_entered(area):

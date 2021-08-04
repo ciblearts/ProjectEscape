@@ -5,4 +5,8 @@
 [node name="Node2D" type="Node2D"]
 
 [node name="Text" parent="." instance=ExtResource( 1 )]
-text = "Long long ago in a once beautiful place, there's a war between two empires. The strong, rich empire defeated the weak, immortal one. The prisoners were captured and imprisoned for execution or thrown into the Colosseum to die in staged battles or be eaten by wild animals. Few of them were left forgotten due to the fall. Years after these desperate prisoners were discovered and decided to use for entertainment purposes again. One of them will win the game and rewrite history or..."
+margin_left = 309.0
+margin_top = 11.0
+margin_right = 575.0
+margin_bottom = 223.0
+text = " Long long ago in a once beautiful place, there's a war between two empires. The strong, rich empire defeated the weak, immortal one. The prisoners were captured and imprisoned for execution or thrown into the Colosseum to die in staged battles or be eaten by wild animals. Few of them were left forgotten due to the fall. Years after these desperate prisoners were discovered and decided to use for entertainment purposes again. One of them will survive the tournament, and rewrite history or..."

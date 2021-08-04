@@ -15,11 +15,10 @@ func _process(_delta):
 				closed = false
 				yield(get_tree().create_timer(5),"timeout")
 				$AnimatedSprite.play("open")
-				#if ACCESS == true:
 				if is_instance_valid(Player):
 					if Player.is_in_group("characters"):
-						print(Player.ALIVE)
-						Player.WIN = true
+						if Player.ACCESS == true:
+							Player.WIN = true
 				closed = false
 			if closed == false:
 				ACCESS = false

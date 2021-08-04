@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assests/Objects/CouchFront.png" type="Texture" id=1]
+[ext_resource path="res://assests/Objects/CouchBack.png" type="Texture" id=2]
+
+[sub_resource type="OccluderPolygon2D" id=1]
+cull_mode = 1
+polygon = PoolVector2Array( -296.559, -82.4808, -213.465, -81.4796, -215.748, 7.80025, 215.551, 7.2444, 213.028, -81.2599, 296.277, -81.2599, 293.348, 82.9964, 219.327, 82.9964, 217.438, 74.1769, -217.953, 74.3825, -218.75, 82.375, -292.766, 83.2701 )
+
+[node name="Couch" type="RigidBody2D"]
+
+[node name="CouchBack" type="Sprite" parent="."]
+position = Vector2( 0, -40 )
+z_as_relative = false
+texture = ExtResource( 2 )
+
+[node name="CouchFront" type="Sprite" parent="."]
+z_index = 1
+texture = ExtResource( 1 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -296.111, -82.6194, -214.998, -83.1271, -213.483, 7.62092, 213.302, 7.17496, 216.451, -80.3895, 296.269, -82.0154, 292.957, 82.5369, 219.565, 82.6897, 218.971, 74.6626, -218.083, 74.5678, -218.645, 82.0593, -292.336, 82.6663 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+occluder = SubResource( 1 )

@@ -1,13 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://scenes/characters/gameboy.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assests/Environment/background.png" type="Texture" id=2]
 [ext_resource path="res://sounds/Down Hearted Blues 1923.wav" type="AudioStream" id=3]
 [ext_resource path="res://scenes/levels/level 1 lights.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/characters/bot3.tscn" type="PackedScene" id=6]
 
 [node name="World" type="Node2D"]
-modulate = Color( 0.0941176, 0.0941176, 0.0941176, 1 )
 
 [node name="background" type="Sprite" parent="."]
 position = Vector2( 11085.8, 9004.85 )
@@ -16,27 +14,38 @@ z_index = -2
 texture = ExtResource( 2 )
 
 [node name="level 1 lights" parent="." instance=ExtResource( 5 )]
-position = Vector2( -464.201, -104.701 )
 
 [node name="bg2" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
 volume_db = -10.0
 autoplay = true
 
-[node name="bot3" parent="." instance=ExtResource( 6 )]
-position = Vector2( 12552.7, 5824.93 )
-
-[node name="bot5" parent="." instance=ExtResource( 6 )]
-position = Vector2( 3225.97, 9363.8 )
-
-[node name="bot4" parent="." instance=ExtResource( 6 )]
-position = Vector2( 1520.01, 1922.58 )
+[node name="bot1" parent="." instance=ExtResource( 6 )]
+position = Vector2( 16969.8, 2337.12 )
 
 [node name="bot2" parent="." instance=ExtResource( 6 )]
-position = Vector2( 13711.6, 10389.3 )
+position = Vector2( 16283.5, 12951 )
 
-[node name="bot1" parent="." instance=ExtResource( 6 )]
-position = Vector2( 15732.8, 2799.76 )
+[node name="bot3" parent="." instance=ExtResource( 6 )]
+position = Vector2( 14705, 6923.84 )
 
-[node name="gameboy" parent="." instance=ExtResource( 1 )]
-position = Vector2( 4968.03, 6765.31 )
+[node name="bot4" parent="." instance=ExtResource( 6 )]
+position = Vector2( 3027.27, 9946.69 )
+
+[node name="bot5" parent="." instance=ExtResource( 6 )]
+position = Vector2( 2723.74, 13429.1 )
+
+[node name="bot6" parent="." instance=ExtResource( 6 )]
+position = Vector2( 9295.07, 12552.4 )
+
+[node name="bot7" parent="." instance=ExtResource( 6 )]
+position = Vector2( 6128.37, 3952.41 )
+
+[node name="bot8" parent="." instance=ExtResource( 6 )]
+position = Vector2( 4791.5, 5587.28 )
+
+[node name="bot10" parent="." instance=ExtResource( 6 )]
+position = Vector2( 17607.1, 10494.1 )
+
+[node name="bot9" parent="." instance=ExtResource( 6 )]
+position = Vector2( 11542.3, 6485.94 )

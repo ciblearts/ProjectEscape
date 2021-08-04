@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://scenes/rooms/room 2.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/rooms/room 3.tscn" type="PackedScene" id=2]
@@ -6,109 +6,140 @@
 [ext_resource path="res://scenes/rooms/room 5.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/rooms/room 1.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/rooms/room 6.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/rooms/room 9.tscn" type="PackedScene" id=7]
 [ext_resource path="res://scenes/rooms/room 7.tscn" type="PackedScene" id=8]
 [ext_resource path="res://scenes/rooms/room 8.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scenes/rooms/room 0.tscn" type="PackedScene" id=10]
 
 [node name="level 1 base" type="Node2D"]
 
 [node name="room 4" parent="." instance=ExtResource( 1 )]
-position = Vector2( 11786.8, 7874.13 )
+position = Vector2( 3855.59, 12530.7 )
 rotation = 1.5708
 
 [node name="room 20" parent="." instance=ExtResource( 5 )]
-position = Vector2( 6296.31, 10879.5 )
+position = Vector2( 18403.7, 13951.5 )
+rotation = 1.5708
 
 [node name="room 25" parent="." instance=ExtResource( 8 )]
-position = Vector2( 10295.8, 914.067 )
+position = Vector2( 10295.8, 1096.66 )
 rotation = 1.5708
 
 [node name="room 21" parent="." instance=ExtResource( 4 )]
-position = Vector2( 13762.7, 8508.75 )
+position = Vector2( 13506.6, 8540.79 )
 rotation = 3.14159
 
 [node name="room 33" parent="." instance=ExtResource( 5 )]
-position = Vector2( 932.817, 3391.7 )
+position = Vector2( 9614.66, 9921.91 )
 
 [node name="room 17" parent="." instance=ExtResource( 6 )]
-position = Vector2( 13489.5, 1301.64 )
+position = Vector2( -40871.1, -9321.94 )
 rotation = 1.5708
 
 [node name="room 18" parent="." instance=ExtResource( 1 )]
-position = Vector2( 14970.4, 7721.74 )
+position = Vector2( 4032.16, 12610.7 )
 
 [node name="room 5" parent="." instance=ExtResource( 3 )]
-position = Vector2( 16511.5, 9715.4 )
+position = Vector2( 17047.6, 5469.6 )
+rotation = 1.5708
 
 [node name="room 26" parent="." instance=ExtResource( 8 )]
-position = Vector2( 3577.78, 5790.18 )
+position = Vector2( 3590.78, 5744.87 )
 
 [node name="room 22" parent="." instance=ExtResource( 4 )]
-position = Vector2( 6820.01, 7810.03 )
+position = Vector2( 6722, 7810.03 )
+rotation = 4.71239
+
+[node name="room 46" parent="." instance=ExtResource( 10 )]
+position = Vector2( 13687.8, 14087.5 )
+
+[node name="room 47" parent="." instance=ExtResource( 10 )]
+position = Vector2( 2556.57, 11631.7 )
+rotation = 1.5708
+
+[node name="room 48" parent="." instance=ExtResource( 10 )]
+position = Vector2( 12759.7, 11785.3 )
+rotation = 1.5708
+
+[node name="room 49" parent="." instance=ExtResource( 10 )]
+position = Vector2( 17024.7, 9846.79 )
+rotation = 3.14159
+
+[node name="room 50" parent="." instance=ExtResource( 10 )]
+position = Vector2( 7743.09, 11379.7 )
 rotation = 4.71239
 
 [node name="room 23" parent="." instance=ExtResource( 6 )]
-position = Vector2( 11784.9, 4812.99 )
+position = Vector2( 11728.9, 4876.99 )
+
+[node name="room 44" parent="." instance=ExtResource( 7 )]
+position = Vector2( 9832.04, 8554.13 )
 
 [node name="room 31" parent="." instance=ExtResource( 9 )]
-position = Vector2( 1382.59, 6851.38 )
+position = Vector2( 13031.6, 12696.8 )
 
 [node name="room 7" parent="." instance=ExtResource( 3 )]
-position = Vector2( 8052.34, 8905.52 )
-rotation = 1.5708
+position = Vector2( 15317.8, 11684.8 )
+rotation = 3.14159
 
 [node name="room 8" parent="." instance=ExtResource( 2 )]
-position = Vector2( 5994.03, 2981.29 )
-rotation = 4.71239
+position = Vector2( 641.723, 3419.43 )
 
 [node name="room 28" parent="." instance=ExtResource( 8 )]
 position = Vector2( 9879.58, 7928.79 )
 rotation = 4.71239
 
 [node name="room 32" parent="." instance=ExtResource( 9 )]
-position = Vector2( 13745.9, 1403.72 )
+position = Vector2( 10719.8, 13144.7 )
+rotation = 3.14159
 
 [node name="room 9" parent="." instance=ExtResource( 5 )]
-position = Vector2( 2765.83, 7921 )
+position = Vector2( 322.602, 6765.36 )
 
 [node name="room 39" parent="." instance=ExtResource( 8 )]
-position = Vector2( 9722.98, 10684.7 )
+position = Vector2( 6025.49, 890.55 )
 rotation = 1.5708
 
 [node name="room 40" parent="." instance=ExtResource( 9 )]
-position = Vector2( 16434.1, 12117.2 )
-rotation = 3.14159
+position = Vector2( 13226.3, 9898.33 )
+rotation = 1.5708
 
 [node name="room 38" parent="." instance=ExtResource( 4 )]
-position = Vector2( 10684.8, 4828.39 )
+position = Vector2( 10662.2, 4872.02 )
 rotation = -1.5708
 
 [node name="room 10" parent="." instance=ExtResource( 1 )]
-position = Vector2( 11127.3, 11088.6 )
+position = Vector2( 15458.5, 12691.9 )
 
 [node name="room 27" parent="." instance=ExtResource( 8 )]
-position = Vector2( 8731.39, 9050.54 )
+position = Vector2( 5794.85, 13599.5 )
+rotation = 1.5708
 
 [node name="room 11" parent="." instance=ExtResource( 2 )]
-position = Vector2( 14829.5, 5680.43 )
+position = Vector2( 14733.7, 5693.47 )
 rotation = 1.5708
 
 [node name="room 12" parent="." instance=ExtResource( 4 )]
-position = Vector2( 14786.1, 3747.99 )
+position = Vector2( 16338.9, 10445.7 )
 
 [node name="room 13" parent="." instance=ExtResource( 6 )]
-position = Vector2( 15197.9, 10820.5 )
-rotation = 3.14159
+position = Vector2( 7285.64, 15419.4 )
+rotation = 4.71239
 
 [node name="room 14" parent="." instance=ExtResource( 3 )]
-position = Vector2( 2530.58, 5789.23 )
+position = Vector2( 2540.09, 5846.31 )
+rotation = 3.14159
+
+[node name="room 42" parent="." instance=ExtResource( 7 )]
+position = Vector2( 3488.84, 8127.84 )
 rotation = 3.14159
 
 [node name="room 15" parent="." instance=ExtResource( 2 )]
-position = Vector2( 17790.8, 10773.8 )
+position = Vector2( 7455.99, 10573 )
 rotation = 1.5708
 
 [node name="room 16" parent="." instance=ExtResource( 3 )]
-position = Vector2( 2763.27, 10919.3 )
+position = Vector2( 2798.27, 10912.2 )
 rotation = 4.71239
 
 [node name="room 19" parent="." instance=ExtResource( 4 )]
@@ -116,17 +147,18 @@ position = Vector2( 4938.13, 10549.5 )
 rotation = 1.5708
 
 [node name="room 1" parent="." instance=ExtResource( 5 )]
-position = Vector2( 2264.52, 2144.47 )
+position = Vector2( 7558.2, 9157.1 )
+rotation = 1.5708
 
 [node name="room 2" parent="." instance=ExtResource( 1 )]
 position = Vector2( 5604.26, 4774.8 )
 
 [node name="room 3" parent="." instance=ExtResource( 2 )]
-position = Vector2( 6317.02, 2566.27 )
+position = Vector2( 6249.14, 2634.15 )
 rotation = 1.5708
 
 [node name="room 6" parent="." instance=ExtResource( 6 )]
-position = Vector2( 6308.57, 7804.05 )
+position = Vector2( 6249.24, 7795.57 )
 rotation = 1.5708
 
 [node name="room 24" parent="." instance=ExtResource( 5 )]
@@ -140,16 +172,26 @@ rotation = -1.5708
 position = Vector2( 2614.33, 3452.95 )
 
 [node name="room 34" parent="." instance=ExtResource( 2 )]
-position = Vector2( 208.488, 2046.23 )
+position = Vector2( 14721.8, 4283.64 )
+
+[node name="room 43" parent="." instance=ExtResource( 7 )]
+position = Vector2( 10768.9, 14608.7 )
+rotation = 3.14159
 
 [node name="room 35" parent="." instance=ExtResource( 1 )]
-position = Vector2( 16722.3, 4398.6 )
+position = Vector2( 818.485, 10807 )
 rotation = -1.5708
 
 [node name="room 30" parent="." instance=ExtResource( 9 )]
-position = Vector2( 4906.29, 930.942 )
+position = Vector2( 13505.6, 1856.05 )
 rotation = 1.5708
 
 [node name="room 36" parent="." instance=ExtResource( 3 )]
-position = Vector2( 17026.5, 5782.47 )
-rotation = 1.5708
+position = Vector2( 14518.4, 3485.02 )
+rotation = 4.71239
+
+[node name="room 41" parent="." instance=ExtResource( 7 )]
+position = Vector2( 16703.4, 2880.79 )
+
+[node name="room 45" parent="." instance=ExtResource( 7 )]
+position = Vector2( 2611.28, 2022.94 )

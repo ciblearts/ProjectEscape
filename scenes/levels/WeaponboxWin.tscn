@@ -5,8 +5,8 @@
 [node name="WeaponboxWin" type="Node2D"]
 
 [node name="DefaultButton" parent="." instance=ExtResource( 1 )]
-margin_left = 814.178
-margin_top = 469.963
-margin_right = 861.178
-margin_bottom = 483.963
-text = "You Won"
+margin_left = 760.0
+margin_top = 480.0
+margin_right = 845.0
+margin_bottom = 494.0
+text = "Victory Achieved"

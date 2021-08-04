@@ -10,9 +10,12 @@ var ALIVE = true
 var WIN = false
 var HIDE = false
 var Picked = 0
-var ACCESS = false
+export var ACCESS = false
 var DIRECTION = 'left'
 var LADDER = false
+var VEST = true
+
+#var blood = load('res://scenes/objects/Blood.tscn')
 
 func _physics_process(_delta):
 	if !ALIVE:
@@ -37,7 +40,6 @@ func _physics_process(_delta):
 			collision.collider.apply_central_impulse(-collision.normal * INERTIA)
 
 func _integrate_forces(state):
-	print("state")
 	var delta = state.get_step()
 	# Steer towards player
 	var distance_to_player = global_position.distance_to($"root/Global/".gameboy.global_position)
@@ -87,6 +89,16 @@ func walk():
 			$Sprite.flip_h = false
 			$vest.flip_h = false
 			$"head phone military".flip_h = false
+			
+func vest(flag):
+	if flag == true:
+		VEST = true
+		$vest.show()
+		$SoundVest.play()
+	elif flag == false:
+		VEST = false
+		$vest.hide()
+		$SoundVestBullet.play()
 
 func climb():
 	if LADDER == true:

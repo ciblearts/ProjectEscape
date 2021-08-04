@@ -10,13 +10,13 @@ polygon = PoolVector2Array( -206.031, -30.0784, 195.077, -32.6011, 209.372, -22.
 
 [node name="platform" type="Sprite" parent="."]
 position = Vector2( -2.60632, 1.35965 )
-z_index = -1
+z_index = 1
 texture = ExtResource( 1 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-polygon = PoolVector2Array( -205.182, -29.5281, 189.357, -31.8877, 204.459, -26.2245, 211.538, -10.1786, 208.706, 7.28305, 180.862, 30.8799, 161.985, 34.6554, -143.831, 30.8799, -150.438, 28.5202, -162.236, 31.3518, -201.407, 16.7218, -215.093, -1.21182, -215.093, -17.7296 )
+polygon = PoolVector2Array( -205.182, -29.5281, 189.357, -31.8877, 204.459, -26.2245, 211.486, -14.5281, 211.486, -1.78575, 202, 14.5, 184.371, 27.0778, 170.481, 32.6337, -166.841, 30.2526, -204.369, 12.9707, -215.093, -1.21182, -215.093, -17.7296 )
 one_way_collision = true
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="."]

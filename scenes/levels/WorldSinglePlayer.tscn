@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/levels/PlacePlayerWorld.gd" type="Script" id=1]
+[ext_resource path="res://scenes/levels/World.tscn" type="PackedScene" id=2]
+
+[node name="WorldSinglePlayer" type="Node2D"]
+modulate = Color( 0.0862745, 0.0862745, 0.0862745, 1 )
+
+[node name="World" parent="." instance=ExtResource( 2 )]
+script = ExtResource( 1 )

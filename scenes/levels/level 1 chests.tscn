@@ -16,88 +16,88 @@ position = Vector2( 232.33, 83.6406 )
 position = Vector2( 10242, 4983.37 )
 
 [node name="weapon_box2" parent="." instance=ExtResource( 2 )]
-position = Vector2( 15674, 2447.72 )
+position = Vector2( 17832.4, 6365.16 )
 
 [node name="weapon_box3" parent="." instance=ExtResource( 2 )]
-position = Vector2( 5342.94, 4583.85 )
+position = Vector2( 5324.45, 4616.27 )
 
 [node name="weapon_box4" parent="." instance=ExtResource( 2 )]
-position = Vector2( 3841.59, 11442.2 )
+position = Vector2( 6351.03, 9730.49 )
 
 [node name="weapon_box5" parent="." instance=ExtResource( 2 )]
-position = Vector2( 5758.64, 2504.06 )
+position = Vector2( 5985.15, 2671.49 )
 
 [node name="weapon_box6" parent="." instance=ExtResource( 2 )]
-position = Vector2( 10517, 9023.78 )
+position = Vector2( 17432.3, 9242.79 )
 
 [node name="weapon_box7" parent="." instance=ExtResource( 2 )]
-position = Vector2( 8832.68, 9799.51 )
+position = Vector2( 6902.38, 10738.6 )
 
 [node name="weapon_box8" parent="." instance=ExtResource( 2 )]
-position = Vector2( 9808.26, 1804.77 )
+position = Vector2( 9824.26, 1984.77 )
 
 [node name="weapon_box9" parent="." instance=ExtResource( 2 )]
-position = Vector2( 1338.25, 5642.27 )
+position = Vector2( 8902.28, 2986.94 )
 
 [node name="weapon_box10" parent="." instance=ExtResource( 2 )]
-position = Vector2( 11781.2, 9808.94 )
+position = Vector2( 8961.62, 13793.1 )
 
 [node name="locker1" parent="." instance=ExtResource( 5 )]
 position = Vector2( 5951.35, 11286.3 )
 
 [node name="locker2" parent="." instance=ExtResource( 5 )]
-position = Vector2( 17671.1, 6519.31 )
+position = Vector2( 16202.2, 8852.38 )
 
 [node name="locker3" parent="." instance=ExtResource( 5 )]
-position = Vector2( 15524.3, 6422.71 )
+position = Vector2( 14430.8, 5805.29 )
 
 [node name="locker4" parent="." instance=ExtResource( 5 )]
-position = Vector2( 12701.7, 8573 )
+position = Vector2( 12444, 8608.96 )
 
 [node name="locker5" parent="." instance=ExtResource( 5 )]
 position = Vector2( 7032.05, 1626.58 )
 
 [node name="locker6" parent="." instance=ExtResource( 5 )]
-position = Vector2( 10292.9, 3476.21 )
+position = Vector2( 10303.6, 3517.25 )
 
 [node name="locker7" parent="." instance=ExtResource( 5 )]
-position = Vector2( 10723.8, 11423.4 )
+position = Vector2( 10594.9, 12187 )
 
 [node name="locker8" parent="." instance=ExtResource( 5 )]
-position = Vector2( 1237.57, 2134.29 )
+position = Vector2( 10640.2, 14309.9 )
 
 [node name="locker9" parent="." instance=ExtResource( 5 )]
-position = Vector2( 3669.93, 2134.33 )
+position = Vector2( 3364.62, 2102.9 )
 
 [node name="locker10" parent="." instance=ExtResource( 5 )]
-position = Vector2( 16313.3, 11154.9 )
+position = Vector2( 15595.9, 11384.3 )
 
 [node name="cupboard1" parent="." instance=ExtResource( 3 )]
 position = Vector2( 6638.17, 4955.54 )
 
 [node name="cupboard2" parent="." instance=ExtResource( 3 )]
-position = Vector2( 15741.6, 7918.89 )
+position = Vector2( 11092.6, 7553.46 )
 
 [node name="cupboard3" parent="." instance=ExtResource( 3 )]
-position = Vector2( 4730.72, 3531.56 )
+position = Vector2( 1496.13, 5743.72 )
 
 [node name="cupboard5" parent="." instance=ExtResource( 3 )]
-position = Vector2( 7687.01, 11067.7 )
+position = Vector2( 4842.06, 14533.1 )
 
 [node name="cupboard6" parent="." instance=ExtResource( 3 )]
-position = Vector2( 17410.1, 10988.3 )
+position = Vector2( 14544.9, 12772.6 )
 
 [node name="cupboard4" parent="." instance=ExtResource( 3 )]
-position = Vector2( 8762.5, 11619.7 )
+position = Vector2( 1609.99, 12952 )
 
 [node name="cupboard7" parent="." instance=ExtResource( 3 )]
-position = Vector2( 2311.31, 3580.73 )
+position = Vector2( 1726.2, 6951.18 )
 
 [node name="cupboard8" parent="." instance=ExtResource( 3 )]
-position = Vector2( 12275.1, 11272.2 )
+position = Vector2( 10636.3, 5998.61 )
 
 [node name="cupboard9" parent="." instance=ExtResource( 3 )]
-position = Vector2( 12545.5, 4872.47 )
+position = Vector2( 12545.5, 4936.61 )
 
 [node name="cupboard10" parent="." instance=ExtResource( 3 )]
-position = Vector2( 3497.05, 6926.4 )
+position = Vector2( 2748.5, 8027.07 )

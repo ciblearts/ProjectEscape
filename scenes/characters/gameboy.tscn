@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://assests/Player/idle.png" type="Texture" id=1]
 [ext_resource path="res://script/gameboy.gd" type="Script" id=2]
@@ -16,31 +16,33 @@
 [ext_resource path="res://scenes/camera/ShakingCamera.tscn" type="PackedScene" id=14]
 [ext_resource path="res://assests/Player/climb.png" type="Texture" id=15]
 [ext_resource path="res://scenes/characters/SoundSteps.gd" type="Script" id=16]
+[ext_resource path="res://sounds/VestBullet.wav" type="AudioStream" id=17]
+[ext_resource path="res://sounds/VestOn.wav" type="AudioStream" id=18]
 
 [sub_resource type="AtlasTexture" id=1]
-flags = 4
-atlas = ExtResource( 5 )
-region = Rect2( 0, 0, 222, 302 )
-
-[sub_resource type="AtlasTexture" id=2]
-flags = 4
-atlas = ExtResource( 5 )
-region = Rect2( 222, 0, 222, 302 )
-
-[sub_resource type="AtlasTexture" id=3]
-flags = 4
-atlas = ExtResource( 5 )
-region = Rect2( 444, 0, 222, 302 )
-
-[sub_resource type="AtlasTexture" id=4]
 flags = 4
 atlas = ExtResource( 15 )
 region = Rect2( 0, 0, 205, 316 )
 
-[sub_resource type="AtlasTexture" id=5]
+[sub_resource type="AtlasTexture" id=2]
 flags = 4
 atlas = ExtResource( 15 )
 region = Rect2( 205, 0, 205, 316 )
+
+[sub_resource type="AtlasTexture" id=3]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 0, 0, 222, 302 )
+
+[sub_resource type="AtlasTexture" id=4]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 222, 0, 222, 302 )
+
+[sub_resource type="AtlasTexture" id=5]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 444, 0, 222, 302 )
 
 [sub_resource type="SpriteFrames" id=6]
 animations = [ {
@@ -54,14 +56,14 @@ animations = [ {
 "name": "jump",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ) ],
-"loop": true,
-"name": "walk",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 4 ), SubResource( 5 ) ],
+"frames": [ SubResource( 1 ), SubResource( 2 ) ],
 "loop": true,
 "name": "climb",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 3 ), SubResource( 4 ), SubResource( 5 ) ],
+"loop": true,
+"name": "walk",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 6 ), ExtResource( 1 ), ExtResource( 6 ) ],
@@ -78,7 +80,7 @@ height = 97.2053
 extents = Vector2( 82.8588, 7910.82 )
 
 [sub_resource type="RectangleShape2D" id=9]
-extents = Vector2( 13116.4, 80.3308 )
+extents = Vector2( 13116.4, 149.515 )
 
 [sub_resource type="RectangleShape2D" id=10]
 extents = Vector2( 92.0654, 7781.04 )
@@ -90,11 +92,11 @@ height = 89.0229
 [node name="gameboy" type="KinematicBody2D" groups=[
 "characters",
 ]]
+modulate = Color( 0.0862745, 0.0862745, 0.0862745, 1 )
 position = Vector2( 19183.7, 8116.04 )
 script = ExtResource( 2 )
 
 [node name="Sprite" type="AnimatedSprite" parent="."]
-modulate = Color( 1, 1, 1, 0.8 )
 position = Vector2( -5.62134, 17.6515 )
 frames = SubResource( 6 )
 animation = "air"
@@ -135,6 +137,17 @@ max_distance = 1000.0
 stream = ExtResource( 13 )
 pitch_scale = 1.2
 
+[node name="SoundSteps" type="AudioStreamPlayer2D" parent="."]
+volume_db = -3.0
+autoplay = true
+script = ExtResource( 16 )
+
+[node name="SoundVest" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 18 )
+
+[node name="SoundVestBullet" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 17 )
+
 [node name="cardboard box" type="Sprite" parent="."]
 visible = false
 position = Vector2( 4.14063, 9.40469 )
@@ -151,7 +164,7 @@ shape = SubResource( 8 )
 [node name="down_resetter" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="down_resetter"]
-position = Vector2( 1065.86, -14501.5 )
+position = Vector2( 456.985, -19372.5 )
 shape = SubResource( 9 )
 
 [node name="left_resetter" type="Area2D" parent="."]
@@ -164,7 +177,6 @@ shape = SubResource( 10 )
 rotation = 1.5708
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Access range"]
-visible = false
 position = Vector2( 7.25085, -6.85242 )
 shape = SubResource( 11 )
 
@@ -172,12 +184,7 @@ shape = SubResource( 11 )
 zoom = Vector2( 2.5, 2.5 )
 
 [node name="gun" parent="." instance=ExtResource( 7 )]
-position = Vector2( -0.813179, 56.1876 )
-
-[node name="SoundSteps" type="AudioStreamPlayer2D" parent="."]
-volume_db = -3.0
-autoplay = true
-script = ExtResource( 16 )
+position = Vector2( -0.813179, 45.1876 )
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="body_entered" from="right_resetter" to="." method="_on_right_resetter_body_entered"]

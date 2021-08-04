@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=2]
+[gd_scene load_steps=36 format=2]
 
 [ext_resource path="res://scenes/characters/botAI3.gd" type="Script" id=1]
 [ext_resource path="res://scenes/characters/bot3.gd" type="Script" id=2]
@@ -20,31 +20,33 @@
 [ext_resource path="res://assests/Player/idle.png" type="Texture" id=18]
 [ext_resource path="res://assests/Player/walk (2).png" type="Texture" id=19]
 [ext_resource path="res://scenes/characters/SoundSteps.gd" type="Script" id=20]
+[ext_resource path="res://sounds/VestBullet.wav" type="AudioStream" id=21]
+[ext_resource path="res://sounds/VestOn.wav" type="AudioStream" id=22]
 
 [sub_resource type="AtlasTexture" id=1]
-flags = 4
-atlas = ExtResource( 19 )
-region = Rect2( 0, 0, 222, 302 )
-
-[sub_resource type="AtlasTexture" id=2]
-flags = 4
-atlas = ExtResource( 19 )
-region = Rect2( 222, 0, 222, 302 )
-
-[sub_resource type="AtlasTexture" id=3]
-flags = 4
-atlas = ExtResource( 19 )
-region = Rect2( 444, 0, 222, 302 )
-
-[sub_resource type="AtlasTexture" id=4]
 flags = 4
 atlas = ExtResource( 9 )
 region = Rect2( 0, 0, 205, 316 )
 
-[sub_resource type="AtlasTexture" id=5]
+[sub_resource type="AtlasTexture" id=2]
 flags = 4
 atlas = ExtResource( 9 )
 region = Rect2( 205, 0, 205, 316 )
+
+[sub_resource type="AtlasTexture" id=3]
+flags = 4
+atlas = ExtResource( 19 )
+region = Rect2( 0, 0, 222, 302 )
+
+[sub_resource type="AtlasTexture" id=4]
+flags = 4
+atlas = ExtResource( 19 )
+region = Rect2( 222, 0, 222, 302 )
+
+[sub_resource type="AtlasTexture" id=5]
+flags = 4
+atlas = ExtResource( 19 )
+region = Rect2( 444, 0, 222, 302 )
 
 [sub_resource type="SpriteFrames" id=6]
 animations = [ {
@@ -58,14 +60,14 @@ animations = [ {
 "name": "jump",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ) ],
-"loop": true,
-"name": "walk",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 4 ), SubResource( 5 ) ],
+"frames": [ SubResource( 1 ), SubResource( 2 ) ],
 "loop": true,
 "name": "climb",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 3 ), SubResource( 4 ), SubResource( 5 ) ],
+"loop": true,
+"name": "walk",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 12 ), ExtResource( 18 ), ExtResource( 12 ) ],
@@ -82,7 +84,7 @@ height = 97.2053
 extents = Vector2( 82.8588, 5073.35 )
 
 [sub_resource type="RectangleShape2D" id=9]
-extents = Vector2( 8937.35, 80.3308 )
+extents = Vector2( 8937.35, 32.7368 )
 
 [sub_resource type="RectangleShape2D" id=10]
 extents = Vector2( 87.5391, 5267.88 )
@@ -146,6 +148,14 @@ volume_db = -5.0
 max_distance = 4000.0
 script = ExtResource( 20 )
 
+[node name="SoundVest" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 22 )
+stream_paused = true
+
+[node name="SoundVestBullet" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 21 )
+stream_paused = true
+
 [node name="gun" type="Node2D" parent="."]
 position = Vector2( 3.8147e-06, 42.7095 )
 script = ExtResource( 3 )
@@ -196,7 +206,7 @@ shape = SubResource( 8 )
 [node name="down_resetter" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="down_resetter"]
-position = Vector2( -869.379, -12082.5 )
+position = Vector2( 156.937, -21425.4 )
 shape = SubResource( 9 )
 
 [node name="left_resetter" type="Area2D" parent="."]
@@ -208,28 +218,29 @@ shape = SubResource( 10 )
 [node name="fire zone" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="fire zone"]
+position = Vector2( -0.560547, 0 )
 shape = SubResource( 11 )
 
 [node name="AI" type="Node2D" parent="."]
 script = ExtResource( 1 )
 
 [node name="left_ray" type="RayCast2D" parent="AI"]
-position = Vector2( -110.036, -108.158 )
+position = Vector2( -121.036, -94.1582 )
 rotation = 1.5708
 enabled = true
 
 [node name="left_ray_down" type="RayCast2D" parent="AI"]
-position = Vector2( -110.036, 119.842 )
+position = Vector2( -112.036, 119.842 )
 rotation = 1.5708
 enabled = true
 
 [node name="right_ray" type="RayCast2D" parent="AI"]
-position = Vector2( 93.651, -108.158 )
+position = Vector2( 110.65, -91.1582 )
 rotation = -1.5708
 enabled = true
 
 [node name="right_ray_down" type="RayCast2D" parent="AI"]
-position = Vector2( 93.651, 119.842 )
+position = Vector2( 95.6504, 119.842 )
 rotation = -1.5708
 enabled = true
 
@@ -253,3 +264,4 @@ shape = SubResource( 13 )
 [connection signal="body_entered" from="AI/player_detection_zone" to="AI" method="_on_player_detection_zone_body_entered"]
 [connection signal="body_exited" from="AI/player_detection_zone" to="AI" method="_on_player_detection_zone_body_exited"]
 [connection signal="area_entered" from="AccessRange" to="AI" method="_on_AccessRange_area_entered"]
+[connection signal="area_exited" from="AccessRange" to="AI" method="_on_AccessRange_area_exited"]

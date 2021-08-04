@@ -1,9 +1,10 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://scenes/machines/portal1.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/rooms/room 1.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/rooms/room 2.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/machines/weapon_box1.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/objects/Couch.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/characters/gameboy.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scenes/characters/bot3.tscn" type="PackedScene" id=7]
 [ext_resource path="res://scenes/rooms/room 6.tscn" type="PackedScene" id=8]
@@ -17,6 +18,7 @@
 [ext_resource path="res://scenes/machines/locker1.tscn" type="PackedScene" id=16]
 [ext_resource path="res://scenes/objects/oil_barrel.tscn" type="PackedScene" id=17]
 [ext_resource path="res://scenes/rooms/room 8.tscn" type="PackedScene" id=18]
+[ext_resource path="res://scenes/objects/Books.tscn" type="PackedScene" id=19]
 
 [node name="creation level" type="Node2D"]
 
@@ -63,16 +65,16 @@ position = Vector2( 1028.07, 2757.63 )
 position = Vector2( 2404.68, 5170.25 )
 
 [node name="gameboy" parent="." instance=ExtResource( 6 )]
-position = Vector2( 825.465, 5361.92 )
+position = Vector2( 5449.69, 1985.65 )
 
 [node name="portal" parent="." instance=ExtResource( 1 )]
 position = Vector2( 3128.28, 3126.28 )
 
 [node name="weapon_box1" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1442.6, 2208.81 )
+position = Vector2( 2697.48, 1816.97 )
 
 [node name="bot3" parent="." instance=ExtResource( 7 )]
-position = Vector2( 4355.39, 1444.52 )
+position = Vector2( 2705.36, 3019.12 )
 
 [node name="weapon_box2" parent="." instance=ExtResource( 16 )]
 position = Vector2( 1297.61, 5752.03 )
@@ -82,3 +84,9 @@ position = Vector2( 2907, 5429.15 )
 
 [node name="LiftingPlatform" parent="." instance=ExtResource( 11 )]
 position = Vector2( 5559.69, 5059.32 )
+
+[node name="Couch" parent="." instance=ExtResource( 5 )]
+position = Vector2( 6107.8, 2309.35 )
+
+[node name="Books" parent="." instance=ExtResource( 19 )]
+position = Vector2( 5728.27, 2266.22 )
