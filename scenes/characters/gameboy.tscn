@@ -21,28 +21,28 @@
 
 [sub_resource type="AtlasTexture" id=1]
 flags = 4
-atlas = ExtResource( 15 )
-region = Rect2( 0, 0, 205, 316 )
-
-[sub_resource type="AtlasTexture" id=2]
-flags = 4
-atlas = ExtResource( 15 )
-region = Rect2( 205, 0, 205, 316 )
-
-[sub_resource type="AtlasTexture" id=3]
-flags = 4
 atlas = ExtResource( 5 )
 region = Rect2( 0, 0, 222, 302 )
 
-[sub_resource type="AtlasTexture" id=4]
+[sub_resource type="AtlasTexture" id=2]
 flags = 4
 atlas = ExtResource( 5 )
 region = Rect2( 222, 0, 222, 302 )
 
-[sub_resource type="AtlasTexture" id=5]
+[sub_resource type="AtlasTexture" id=3]
 flags = 4
 atlas = ExtResource( 5 )
 region = Rect2( 444, 0, 222, 302 )
+
+[sub_resource type="AtlasTexture" id=4]
+flags = 4
+atlas = ExtResource( 15 )
+region = Rect2( 0, 0, 205, 316 )
+
+[sub_resource type="AtlasTexture" id=5]
+flags = 4
+atlas = ExtResource( 15 )
+region = Rect2( 205, 0, 205, 316 )
 
 [sub_resource type="SpriteFrames" id=6]
 animations = [ {
@@ -56,14 +56,14 @@ animations = [ {
 "name": "jump",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 1 ), SubResource( 2 ) ],
-"loop": true,
-"name": "climb",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 3 ), SubResource( 4 ), SubResource( 5 ) ],
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ) ],
 "loop": true,
 "name": "walk",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 4 ), SubResource( 5 ) ],
+"loop": true,
+"name": "climb",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 6 ), ExtResource( 1 ), ExtResource( 6 ) ],
@@ -77,13 +77,13 @@ radius = 88.4231
 height = 97.2053
 
 [sub_resource type="RectangleShape2D" id=8]
-extents = Vector2( 82.8588, 7910.82 )
+extents = Vector2( 82.8588, 20021 )
 
 [sub_resource type="RectangleShape2D" id=9]
 extents = Vector2( 13116.4, 149.515 )
 
 [sub_resource type="RectangleShape2D" id=10]
-extents = Vector2( 92.0654, 7781.04 )
+extents = Vector2( 92.0654, 19384.5 )
 
 [sub_resource type="CapsuleShape2D" id=11]
 radius = 187.633
@@ -158,7 +158,7 @@ texture = ExtResource( 10 )
 position = Vector2( -798.246, 171.053 )
 
 [node name="player_on_right" type="CollisionShape2D" parent="right_resetter"]
-position = Vector2( -18450.7, 365.306 )
+position = Vector2( -18876.7, 365.306 )
 shape = SubResource( 8 )
 
 [node name="down_resetter" type="Area2D" parent="."]
@@ -170,7 +170,7 @@ shape = SubResource( 9 )
 [node name="left_resetter" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="left_resetter"]
-position = Vector2( 18590.8, -16.2576 )
+position = Vector2( 20000.8, -0.257599 )
 shape = SubResource( 10 )
 
 [node name="Access range" type="Area2D" parent="."]

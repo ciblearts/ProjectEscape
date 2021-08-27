@@ -1,0 +1,48 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scenes/MainMenu/DefaultButton.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/MainMenu/Label.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/MainMenu/Simple_prompt.gd" type="Script" id=3]
+
+[node name="Simple_prompt" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 1.49829
+margin_right = 1.49829
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -456.624
+margin_top = -233.191
+margin_right = 467.376
+margin_bottom = 112.809
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Ok" parent="Panel" instance=ExtResource( 1 )]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -40.7841
+margin_top = -200.895
+margin_right = -6.78406
+margin_bottom = -187.895
+text = "Ok"
+
+[node name="Label" parent="." instance=ExtResource( 2 )]
+margin_left = -427.478
+margin_top = -158.719
+margin_right = -238.478
+margin_bottom = -145.719
+text = "Simple Prompt"
+
+[connection signal="pressed" from="Panel/Ok" to="." method="_on_Ok_pressed"]

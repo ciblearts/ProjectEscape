@@ -142,7 +142,7 @@ func fall_left_reset():
 	
 func fall_right_reset():
 	var player_instance = get_node(".")
-	player_instance.position.x = 18900
+	player_instance.position.x = 19220
 	#get_parent().call_deferred("add_child", player_instance)
 	
 func fall_y_reset():

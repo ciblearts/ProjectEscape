@@ -10,7 +10,8 @@ func _on_RigidBody2D_body_entered(body):
 		else:
 			body.ALIVE = false
 			var blood_instance = blood.instance()
-			get_tree().current_scene.add_child(blood_instance)
+			print(get_tree())
+			get_tree().get_root().add_child(blood_instance)
 			blood_instance.global_position = global_position
 			blood_instance.rotation_degrees = rotation_degrees
 	var explotion_instance = explotion.instance()

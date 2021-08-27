@@ -8,8 +8,8 @@
 [node name="World" type="Node2D"]
 
 [node name="background" type="Sprite" parent="."]
-position = Vector2( 11085.8, 9004.85 )
-scale = Vector2( 17.4615, 21.211 )
+position = Vector2( 10019.1, 8115.91 )
+scale = Vector2( 18.5727, 29.0657 )
 z_index = -2
 texture = ExtResource( 2 )
 
@@ -18,7 +18,6 @@ texture = ExtResource( 2 )
 [node name="bg2" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
 volume_db = -10.0
-autoplay = true
 
 [node name="bot1" parent="." instance=ExtResource( 6 )]
 position = Vector2( 16969.8, 2337.12 )
@@ -27,7 +26,7 @@ position = Vector2( 16969.8, 2337.12 )
 position = Vector2( 16283.5, 12951 )
 
 [node name="bot3" parent="." instance=ExtResource( 6 )]
-position = Vector2( 14705, 6923.84 )
+position = Vector2( 19830, 7048.89 )
 
 [node name="bot4" parent="." instance=ExtResource( 6 )]
 position = Vector2( 3027.27, 9946.69 )

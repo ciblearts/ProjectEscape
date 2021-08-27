@@ -6,7 +6,7 @@
 [ext_resource path="res://assests/Objects/Locker Closed.png" type="Texture" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 92.4262, 289.795 )
+extents = Vector2( 273.407, 289.795 )
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
@@ -22,7 +22,7 @@ animations = [ {
 script = ExtResource( 3 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
-position = Vector2( -184.678, -0.952286 )
+position = Vector2( 0.322006, -0.952286 )
 shape = SubResource( 1 )
 
 [node name="SoundOpen" type="AudioStreamPlayer2D" parent="."]

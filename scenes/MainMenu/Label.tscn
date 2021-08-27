@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://assests/Fonts/m5x7_16.tres" type="DynamicFont" id=1]
+
+[node name="Label" type="Label"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -471.5
+margin_top = -124.5
+margin_right = -282.5
+margin_bottom = -111.5
+rect_scale = Vector2( 5, 5 )
+custom_fonts/font = ExtResource( 1 )
+text = "Type In Sever IP"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}

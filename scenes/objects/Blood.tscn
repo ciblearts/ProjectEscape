@@ -5,6 +5,7 @@
 [ext_resource path="res://sounds/Spit_Splat.wav" type="AudioStream" id=3]
 
 [node name="Blood" type="CPUParticles2D"]
+modulate = Color( 0.0862745, 0.0862745, 0.0862745, 1 )
 self_modulate = Color( 0.796078, 0.898039, 0.917647, 1 )
 z_index = -1
 amount = 100

@@ -16,7 +16,7 @@ position = Vector2( 232.33, 83.6406 )
 position = Vector2( 10242, 4983.37 )
 
 [node name="weapon_box2" parent="." instance=ExtResource( 2 )]
-position = Vector2( 17832.4, 6365.16 )
+position = Vector2( 17734.2, 2176.47 )
 
 [node name="weapon_box3" parent="." instance=ExtResource( 2 )]
 position = Vector2( 5324.45, 4616.27 )
@@ -85,7 +85,7 @@ position = Vector2( 1496.13, 5743.72 )
 position = Vector2( 4842.06, 14533.1 )
 
 [node name="cupboard6" parent="." instance=ExtResource( 3 )]
-position = Vector2( 14544.9, 12772.6 )
+position = Vector2( 14576, 12844.7 )
 
 [node name="cupboard4" parent="." instance=ExtResource( 3 )]
 position = Vector2( 1609.99, 12952 )

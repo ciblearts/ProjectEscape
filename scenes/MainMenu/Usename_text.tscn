@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Usename_text.gd" type="Script" id=1]
+[ext_resource path="res://assests/Fonts/m5x7_16.tres" type="DynamicFont" id=2]
+
+[node name="Usename_text" type="Node2D" groups=[
+"Net",
+]]
+script = ExtResource( 1 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = -19.9109
+margin_top = -51.3137
+margin_right = 20.0891
+margin_bottom = -37.3137
+custom_fonts/font = ExtResource( 2 )
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}

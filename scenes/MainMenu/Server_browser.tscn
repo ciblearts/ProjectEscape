@@ -1,0 +1,111 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://scenes/MainMenu/Label.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/MainMenu/DefaultButton.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assests/Fonts/m5x7_16.tres" type="DynamicFont" id=3]
+[ext_resource path="res://scenes/MainMenu/Server_listener.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/MainMenu/Server_browser.gd" type="Script" id=5]
+
+[sub_resource type="Animation" id=1]
+resource_name = "Searching"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.00232568, 0.300013, 0.613979, 0.895387 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ "Searching For Servers", "Searching For Servers.", "Searching For Servers..", "Searching For Servers..." ]
+}
+
+[node name="Server_browser" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -0.629974
+margin_right = -0.630005
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Manual_setup" parent="." instance=ExtResource( 2 )]
+margin_left = 1485.27
+margin_top = 899.649
+margin_right = 1554.27
+margin_bottom = 912.649
+text = "Manual Setup"
+
+[node name="Go_back" parent="." instance=ExtResource( 2 )]
+anchor_left = 7.94729e-09
+anchor_top = -5.6514e-08
+anchor_right = 7.94729e-09
+anchor_bottom = -5.6514e-08
+margin_left = 161.397
+margin_top = 928.157
+margin_right = 195.397
+margin_bottom = 941.157
+text = "Back"
+
+[node name="Server_ip_text_edit" type="LineEdit" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -473.5
+margin_top = -50.5
+margin_right = 473.5
+margin_bottom = 50.5
+custom_fonts/font = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Type_in_server_ip" parent="Server_ip_text_edit" instance=ExtResource( 1 )]
+margin_top = -141.5
+margin_bottom = -128.5
+
+[node name="Join_server" parent="Server_ip_text_edit" instance=ExtResource( 2 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -472.5
+margin_top = 65.5
+margin_right = -282.5
+margin_bottom = 78.5
+text = "Join Server"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.515
+anchor_right = 0.5
+anchor_bottom = 0.515
+margin_left = -792.658
+margin_top = -320.42
+margin_right = -472.658
+margin_bottom = -192.42
+rect_scale = Vector2( 5, 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Searching_for_servers" type="Label" parent="VBoxContainer"]
+margin_right = 320.0
+margin_bottom = 13.0
+custom_fonts/font = ExtResource( 3 )
+text = "Searching For Servers..."
+align = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="VBoxContainer/Searching_for_servers"]
+anims/Searching = SubResource( 1 )
+
+[node name="Server_listener" parent="." instance=ExtResource( 4 )]
+
+[connection signal="pressed" from="Manual_setup" to="." method="_on_Manual_setup_pressed"]
+[connection signal="pressed" from="Go_back" to="." method="_on_Go_back_pressed"]
+[connection signal="pressed" from="Server_ip_text_edit/Join_server" to="." method="_on_Join_server_pressed"]
+[connection signal="new_server" from="Server_listener" to="." method="_on_Server_listener_new_server"]
+[connection signal="remove_server" from="Server_listener" to="." method="_on_Server_listener_remove_server"]

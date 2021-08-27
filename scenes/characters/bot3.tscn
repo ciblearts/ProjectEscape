@@ -25,28 +25,28 @@
 
 [sub_resource type="AtlasTexture" id=1]
 flags = 4
-atlas = ExtResource( 9 )
-region = Rect2( 0, 0, 205, 316 )
-
-[sub_resource type="AtlasTexture" id=2]
-flags = 4
-atlas = ExtResource( 9 )
-region = Rect2( 205, 0, 205, 316 )
-
-[sub_resource type="AtlasTexture" id=3]
-flags = 4
 atlas = ExtResource( 19 )
 region = Rect2( 0, 0, 222, 302 )
 
-[sub_resource type="AtlasTexture" id=4]
+[sub_resource type="AtlasTexture" id=2]
 flags = 4
 atlas = ExtResource( 19 )
 region = Rect2( 222, 0, 222, 302 )
 
-[sub_resource type="AtlasTexture" id=5]
+[sub_resource type="AtlasTexture" id=3]
 flags = 4
 atlas = ExtResource( 19 )
 region = Rect2( 444, 0, 222, 302 )
+
+[sub_resource type="AtlasTexture" id=4]
+flags = 4
+atlas = ExtResource( 9 )
+region = Rect2( 0, 0, 205, 316 )
+
+[sub_resource type="AtlasTexture" id=5]
+flags = 4
+atlas = ExtResource( 9 )
+region = Rect2( 205, 0, 205, 316 )
 
 [sub_resource type="SpriteFrames" id=6]
 animations = [ {
@@ -60,14 +60,14 @@ animations = [ {
 "name": "jump",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 1 ), SubResource( 2 ) ],
-"loop": true,
-"name": "climb",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 3 ), SubResource( 4 ), SubResource( 5 ) ],
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ) ],
 "loop": true,
 "name": "walk",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 4 ), SubResource( 5 ) ],
+"loop": true,
+"name": "climb",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 12 ), ExtResource( 18 ), ExtResource( 12 ) ],
@@ -81,13 +81,13 @@ radius = 86.933
 height = 97.2053
 
 [sub_resource type="RectangleShape2D" id=8]
-extents = Vector2( 82.8588, 5073.35 )
+extents = Vector2( 88.8047, 15822.2 )
 
 [sub_resource type="RectangleShape2D" id=9]
 extents = Vector2( 8937.35, 32.7368 )
 
 [sub_resource type="RectangleShape2D" id=10]
-extents = Vector2( 87.5391, 5267.88 )
+extents = Vector2( 87.5391, 15992.7 )
 
 [sub_resource type="CircleShape2D" id=11]
 radius = 360.202
@@ -102,7 +102,7 @@ height = 100.111
 [node name="bot3" type="KinematicBody2D" groups=[
 "characters",
 ]]
-position = Vector2( 12616.9, 7912.44 )
+position = Vector2( 481.908, 7228.62 )
 script = ExtResource( 2 )
 
 [node name="Sprite" type="AnimatedSprite" parent="."]
@@ -200,7 +200,7 @@ texture = ExtResource( 14 )
 position = Vector2( -1534.27, -967.988 )
 
 [node name="player_on_right" type="CollisionShape2D" parent="right_resetter"]
-position = Vector2( -17171.5, 178.905 )
+position = Vector2( -18699.3, 355.296 )
 shape = SubResource( 8 )
 
 [node name="down_resetter" type="Area2D" parent="."]
@@ -212,7 +212,7 @@ shape = SubResource( 9 )
 [node name="left_resetter" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="left_resetter"]
-position = Vector2( 19045.4, 983.207 )
+position = Vector2( 19751.4, 983.207 )
 shape = SubResource( 10 )
 
 [node name="fire zone" type="Area2D" parent="."]

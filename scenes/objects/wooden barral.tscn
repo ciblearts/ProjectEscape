@@ -10,7 +10,7 @@ polygon = PoolVector2Array( -77.575, -155.747, 87.6614, -154.065, 103.218, -120.
 "bodies",
 ]]
 mass = 10.0
-gravity_scale = 100.0
+gravity_scale = 10.0
 
 [node name="wooden barral" type="Sprite" parent="."]
 texture = ExtResource( 1 )
