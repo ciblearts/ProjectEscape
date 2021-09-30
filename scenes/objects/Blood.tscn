@@ -5,7 +5,6 @@
 [ext_resource path="res://sounds/Spit_Splat.wav" type="AudioStream" id=3]
 
 [node name="Blood" type="CPUParticles2D"]
-modulate = Color( 0.0862745, 0.0862745, 0.0862745, 1 )
 self_modulate = Color( 0.796078, 0.898039, 0.917647, 1 )
 z_index = -1
 amount = 100
@@ -60,5 +59,5 @@ autostart = true
 stream = ExtResource( 3 )
 autoplay = true
 
-[connection signal="timeout" from="Timer" to="Blood2" method="_on_Timer_timeout"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="Timer" to="Blood2" method="_on_Timer_timeout"]

@@ -24,13 +24,12 @@ func _ready():
 
 func _physics_process(_delta):
 	if ALIVE == false:
-		#print("game over")
-		#$ShakingCamera.
 		print(get_tree().get_root().get_node("World").stop())
 		queue_free()
 		var _new_scene = get_tree().change_scene("res://scenes/levels/game over.tscn")
 		return
 	if WIN == true:
+		print(get_tree().get_root().get_node("World").stop())
 		queue_free()
 		var _new_scene = get_tree().change_scene("res://scenes/levels/WeaponBoxWin.tscn")
 		return
