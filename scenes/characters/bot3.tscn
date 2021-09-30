@@ -16,7 +16,7 @@
 [ext_resource path="res://assests/Addons/cardboard box.png" type="Texture" id=14]
 [ext_resource path="res://assests/Addons/head phone military.png" type="Texture" id=15]
 [ext_resource path="res://sounds/GunEmpty.wav" type="AudioStream" id=16]
-[ext_resource path="res://assests/Effects/light.png" type="Texture" id=17]
+[ext_resource path="res://assests/Effects/light mod.png" type="Texture" id=17]
 [ext_resource path="res://assests/Player/idle.png" type="Texture" id=18]
 [ext_resource path="res://assests/Player/walk (2).png" type="Texture" id=19]
 [ext_resource path="res://scenes/characters/SoundSteps.gd" type="Script" id=20]
@@ -167,11 +167,10 @@ position = Vector2( 60.4991, 0 )
 texture = ExtResource( 5 )
 
 [node name="Light2D" type="Light2D" parent="gun"]
-position = Vector2( 153.999, 0 )
+position = Vector2( 268.999, -5 )
 z_index = 2
 texture = ExtResource( 17 )
 texture_scale = 2.0
-energy = 7.0
 shadow_enabled = true
 
 [node name="BulletPoint" type="Node2D" parent="gun"]

@@ -90,7 +90,7 @@ position = Vector2( 3937.76, 4498.42 )
 position = Vector2( 14235.4, 15105.5 )
 
 [node name="lamp_38" parent="." instance=ExtResource( 5 )]
-position = Vector2( 16864.2, 3553.31 )
+position = Vector2( 17120.5, 4001.82 )
 
 [node name="lamp_18" parent="." instance=ExtResource( 4 )]
 position = Vector2( 12480.4, 5896.49 )
@@ -169,3 +169,15 @@ position = Vector2( 9459.37, 3990.89 )
 
 [node name="lamp_53" parent="." instance=ExtResource( 5 )]
 position = Vector2( 8545.54, 11473.1 )
+
+[node name="lamp_54" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1361.74, 1730.02 )
+
+[node name="lamp_55" parent="." instance=ExtResource( 5 )]
+position = Vector2( 9353.75, 1960.13 )
+
+[node name="lamp_56" parent="." instance=ExtResource( 5 )]
+position = Vector2( 14790.2, 7928.77 )
+
+[node name="lamp_57" parent="." instance=ExtResource( 5 )]
+position = Vector2( 6781.23, 14062.3 )

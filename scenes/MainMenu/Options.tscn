@@ -1,6 +1,19 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scenes/MainMenu/Text.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/MainMenu/Lobby.gd" type="Script" id=2]
+[ext_resource path="res://scenes/MainMenu/DefaultButton.tscn" type="PackedScene" id=3]
+
+[sub_resource type="StyleBoxFlat" id=1]
+content_margin_left = 0.0
+content_margin_right = 0.0
+content_margin_top = 0.0
+content_margin_bottom = 0.0
+bg_color = Color( 0.14902, 0.168627, 0.266667, 0 )
+border_color = Color( 0, 0, 0, 0 )
+border_blend = true
+shadow_color = Color( 0, 0, 0, 0 )
+anti_aliasing = false
 
 [node name="Node2D" type="Node2D"]
 
@@ -22,3 +35,22 @@ Tips:
 Player can access only one machine at a time, move out of range and inside to access unaccessible machines
 Loots contain either a bullet or vest
 The portal of victory is in one of the three loots"
+
+[node name="Lobby" parent="." instance=ExtResource( 3 )]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 3.14337
+margin_top = 979.501
+margin_right = 47.1434
+margin_bottom = 994.501
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 1 )
+custom_styles/focus = SubResource( 1 )
+custom_styles/disabled = SubResource( 1 )
+custom_styles/normal = SubResource( 1 )
+text = "Lobby"
+script = ExtResource( 2 )
+
+[connection signal="pressed" from="Lobby" to="Lobby" method="_on_Lobby_pressed"]

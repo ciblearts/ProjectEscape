@@ -37,7 +37,6 @@ polygon = PoolVector2Array( -42.8235, 72.6065, -16.0361, 74.3923, 13.1324, 72.20
 visible = false
 texture = ExtResource( 1 )
 color = Color( 1, 0.929412, 0.47451, 1 )
-energy = 3.0
 shadow_enabled = true
 
 [node name="Area2D" type="Area2D" parent="."]

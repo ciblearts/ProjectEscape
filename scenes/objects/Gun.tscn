@@ -3,7 +3,7 @@
 [ext_resource path="res://script/gun.gd" type="Script" id=1]
 [ext_resource path="res://sounds/GunShot.wav" type="AudioStream" id=2]
 [ext_resource path="res://sounds/GunEmpty.wav" type="AudioStream" id=3]
-[ext_resource path="res://assests/Effects/light.png" type="Texture" id=4]
+[ext_resource path="res://assests/Effects/light mod.png" type="Texture" id=4]
 [ext_resource path="res://assests/Weapon/gun.png" type="Texture" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -17,11 +17,10 @@ position = Vector2( 70.4098, -14.63 )
 texture = ExtResource( 5 )
 
 [node name="Light2D" type="Light2D" parent="."]
-position = Vector2( 165.326, -16.0458 )
+position = Vector2( 278.326, -17.0458 )
 z_index = 2
 texture = ExtResource( 4 )
 texture_scale = 2.0
-energy = 7.0
 shadow_enabled = true
 
 [node name="BulletPoint" type="Node2D" parent="."]

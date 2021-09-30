@@ -92,7 +92,6 @@ height = 89.0229
 [node name="gameboy" type="KinematicBody2D" groups=[
 "characters",
 ]]
-modulate = Color( 0.0862745, 0.0862745, 0.0862745, 1 )
 position = Vector2( 19183.7, 8116.04 )
 script = ExtResource( 2 )
 

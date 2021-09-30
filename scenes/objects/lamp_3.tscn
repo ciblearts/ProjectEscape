@@ -28,7 +28,6 @@ shape = SubResource( 1 )
 [node name="Light2D" type="Light2D" parent="pin/lamp"]
 visible = false
 texture = ExtResource( 1 )
-energy = 3.0
 shadow_enabled = true
 
 [node name="lamp3" type="Sprite" parent="pin/lamp"]
