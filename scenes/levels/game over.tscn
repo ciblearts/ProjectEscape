@@ -7,11 +7,11 @@
 [node name="game over" type="Node2D"]
 
 [node name="Text" parent="." instance=ExtResource( 2 )]
-margin_left = 846.907
-margin_top = 485.749
-margin_right = 1112.91
-margin_bottom = 680.749
-text = "You Died"
+margin_left = 840.0
+margin_top = 491.0
+margin_right = 899.0
+margin_bottom = 508.0
+text = " You Died"
 
 [node name="Lobby" parent="." instance=ExtResource( 1 )]
 anchor_left = 1.0

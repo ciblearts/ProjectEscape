@@ -17,14 +17,16 @@ func _ready():
 func _on_Single_Player_pressed():
 	SceneChanger.goto_scene("res://scenes/levels/WorldSinglePlayer.tscn", self)
 
-func _on_DefaultButton3_pressed():
-	SceneChanger.goto_scene("res://scenes/levels/Practice level.tscn", self)
-
-func _on_DefaultButton7_pressed():
-	SceneChanger.goto_scene("res://scenes/MainMenu/Story.tscn", self)
-
 func _on_Options_pressed():
 	SceneChanger.goto_scene("res://scenes/MainMenu/Options.tscn", self)
 
 func _on_Multiplayer_pressed():
-	SceneChanger.goto_scene("res://scenes/MainMenu/Network_setup.tscn", self)
+	#SceneChanger.goto_scene("res://scenes/MainMenu/Network_setup.tscn", self)
+	pass
+
+func _on_Practice_Level_pressed():
+	#SceneChanger.goto_scene("res://scenes/levels/Practice level.tscn", self)
+	pass
+
+func _on_Story_pressed():
+	SceneChanger.goto_scene("res://scenes/MainMenu/Story.tscn", self)

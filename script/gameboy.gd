@@ -20,15 +20,18 @@ const JUMPFORCE = -1100
 var machine
 
 func _ready():
+	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 	$"/root/Global".register_player(self)
 
 func _physics_process(_delta):
 	if ALIVE == false:
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		print(get_tree().get_root().get_node("World").stop())
 		queue_free()
 		var _new_scene = get_tree().change_scene("res://scenes/levels/game over.tscn")
 		return
 	if WIN == true:
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		print(get_tree().get_root().get_node("World").stop())
 		queue_free()
 		var _new_scene = get_tree().change_scene("res://scenes/levels/WeaponBoxWin.tscn")
