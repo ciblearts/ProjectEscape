@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://scenes/MainMenu/Text.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/MainMenu/Lobby.gd" type="Script" id=2]
 [ext_resource path="res://scenes/MainMenu/DefaultButton.tscn" type="PackedScene" id=3]
+[ext_resource path="res://backgrounds/Project Escape Menu.png" type="Texture" id=4]
 
 [sub_resource type="StyleBoxFlat" id=1]
 content_margin_left = 0.0
@@ -16,6 +17,11 @@ shadow_color = Color( 0, 0, 0, 0 )
 anti_aliasing = false
 
 [node name="Node2D" type="Node2D"]
+
+[node name="Project Escape Menu" type="Sprite" parent="."]
+position = Vector2( 960.236, 540.049 )
+scale = Vector2( 1.5, 1.5 )
+texture = ExtResource( 4 )
 
 [node name="Text" parent="." instance=ExtResource( 1 )]
 margin_left = 452.0

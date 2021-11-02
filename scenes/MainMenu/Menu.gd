@@ -30,3 +30,6 @@ func _on_Practice_Level_pressed():
 
 func _on_Story_pressed():
 	SceneChanger.goto_scene("res://scenes/MainMenu/Story.tscn", self)
+
+func _on_Exit_pressed():
+	get_tree().quit()

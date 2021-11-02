@@ -538,3 +538,9 @@ position = Vector2( 12554.1, 9898.62 )
 
 [node name="ladder6" parent="." instance=ExtResource( 9 )]
 position = Vector2( 12554.8, 10473.8 )
+
+[node name="ladder7" parent="." instance=ExtResource( 9 )]
+position = Vector2( 13300.1, 13274.4 )
+
+[node name="ladder8" parent="." instance=ExtResource( 9 )]
+position = Vector2( 13300.2, 12767.9 )

@@ -55,7 +55,7 @@ position = Vector2( 14430.8, 5805.29 )
 position = Vector2( 15524.1, 2129.19 )
 
 [node name="locker5" parent="." instance=ExtResource( 5 )]
-position = Vector2( 7032.05, 1626.58 )
+position = Vector2( 6262.04, 1626.59 )
 
 [node name="locker6" parent="." instance=ExtResource( 5 )]
 position = Vector2( 10303.6, 3517.25 )
