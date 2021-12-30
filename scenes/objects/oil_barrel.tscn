@@ -1,8 +1,7 @@
-[gd_scene load_steps=54 format=2]
+[gd_scene load_steps=53 format=2]
 
 [ext_resource path="res://scenes/objects/oil_barrel.gd" type="Script" id=1]
-[ext_resource path="res://assests/Objects/toxic can.png" type="Texture" id=2]
-[ext_resource path="res://assests/Effects/toxic can.png" type="Texture" id=3]
+[ext_resource path="res://assests/Objects/toxic can.png" type="Texture" id=3]
 [ext_resource path="res://sounds/Explosion.wav" type="AudioStream" id=4]
 [ext_resource path="res://assests/Effects/explotion.png" type="Texture" id=5]
 
@@ -249,9 +248,7 @@ extents = Vector2( 116.101, 175.056 )
 cull_mode = 1
 polygon = PoolVector2Array( -109.36, -169.198, 109.305, -168.404, 109.672, 167.524, -108.928, 166.682 )
 
-[node name="oil_barrel" type="RigidBody2D" groups=[
-"bodies",
-]]
+[node name="oil_barrel" type="RigidBody2D" groups=["bodies"]]
 mass = 10.0
 gravity_scale = 100.0
 script = ExtResource( 1 )
@@ -274,7 +271,7 @@ animation = "explotion2"
 shape = SubResource( 47 )
 
 [node name="Sprite" type="Sprite" parent="."]
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Sprite"]
 occluder = SubResource( 48 )

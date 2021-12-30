@@ -55,14 +55,14 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 12 ) ],
-"loop": true,
-"name": "jump",
-"speed": 5.0
-}, {
 "frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ) ],
 "loop": true,
 "name": "walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 12 ) ],
+"loop": true,
+"name": "jump",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 4 ), SubResource( 5 ) ],
@@ -99,9 +99,7 @@ radius = 473.667
 radius = 166.402
 height = 100.111
 
-[node name="bot3" type="KinematicBody2D" groups=[
-"characters",
-]]
+[node name="bot3" type="KinematicBody2D" groups=["characters"]]
 position = Vector2( 481.908, 7228.62 )
 script = ExtResource( 2 )
 
@@ -249,6 +247,9 @@ visible = false
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AI/player_detection_zone"]
 shape = SubResource( 12 )
 
+[node name="Timer" type="Timer" parent="AI"]
+wait_time = 5.5
+
 [node name="AccessRange" type="Area2D" parent="."]
 visible = false
 
@@ -262,5 +263,6 @@ shape = SubResource( 13 )
 [connection signal="body_entered" from="left_resetter" to="." method="_on_left_resetter_body_entered"]
 [connection signal="body_entered" from="AI/player_detection_zone" to="AI" method="_on_player_detection_zone_body_entered"]
 [connection signal="body_exited" from="AI/player_detection_zone" to="AI" method="_on_player_detection_zone_body_exited"]
+[connection signal="timeout" from="AI/Timer" to="AI" method="_on_Timer_timeout"]
 [connection signal="area_entered" from="AccessRange" to="AI" method="_on_AccessRange_area_entered"]
 [connection signal="area_exited" from="AccessRange" to="AI" method="_on_AccessRange_area_exited"]

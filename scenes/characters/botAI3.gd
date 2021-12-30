@@ -15,6 +15,7 @@ onready var player_detection_zone = $player_detection_zone
 var current_state = State.HIDE setget set_state
 var player = get_parent()
 var machine
+var hide = false
 
 func _ready():
 	set_state(State.WALK)
@@ -25,9 +26,11 @@ func _process(_delta):
 			get_parent().hide()
 			#get_parent().HIDE = true
 			#get_parent().walk(false)
-			yield(get_tree().create_timer(5.5),"timeout")
-			get_parent().unhide()
-			set_state(State.WALK)
+			hide = true
+			$Timer.start(5.5); yield($Timer, "timeout")
+			if hide == false:
+				get_parent().unhide()
+				set_state(State.WALK)
 			#print("hide")
 		State.CHASE:
 			pass
@@ -77,3 +80,7 @@ func _on_player_detection_zone_body_exited(_body):
 
 func _on_AccessRange_area_exited(area):
 	get_parent().ACCESS = false
+
+
+func _on_Timer_timeout():
+	hide = false
