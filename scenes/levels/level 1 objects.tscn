@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://scenes/objects/oven.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/objects/television.tscn" type="PackedScene" id=2]
@@ -24,6 +24,7 @@
 [ext_resource path="res://scenes/objects/board.tscn" type="PackedScene" id=22]
 [ext_resource path="res://scenes/objects/painting.tscn" type="PackedScene" id=23]
 [ext_resource path="res://scenes/objects/Vase.tscn" type="PackedScene" id=24]
+[ext_resource path="res://scenes/objects/Statue.tscn" type="PackedScene" id=25]
 
 [node name="level 1 objects" type="Node2D"]
 position = Vector2( 0, -2 )
@@ -259,6 +260,9 @@ position = Vector2( 5841.49, 8596.09 )
 
 [node name="LiftingPlatform4" parent="." instance=ExtResource( 15 )]
 position = Vector2( 13026.2, 3002.28 )
+
+[node name="Statue1" parent="." instance=ExtResource( 25 )]
+position = Vector2( 16911.6, 12576.8 )
 
 [node name="Clock2" parent="." instance=ExtResource( 14 )]
 position = Vector2( 15330.6, 7867.64 )
@@ -544,3 +548,21 @@ position = Vector2( 13300.1, 13274.4 )
 
 [node name="ladder8" parent="." instance=ExtResource( 9 )]
 position = Vector2( 13300.2, 12767.9 )
+
+[node name="Statue2" parent="." instance=ExtResource( 25 )]
+position = Vector2( 7285.51, 4659.04 )
+
+[node name="Statue6" parent="." instance=ExtResource( 25 )]
+position = Vector2( 16354.7, 13928.1 )
+
+[node name="Statue5" parent="." instance=ExtResource( 25 )]
+position = Vector2( 10370.2, 8525.83 )
+
+[node name="Statue4" parent="." instance=ExtResource( 25 )]
+position = Vector2( 4622.82, 11189.5 )
+
+[node name="Statue3" parent="." instance=ExtResource( 25 )]
+position = Vector2( 17987.1, 5426.04 )
+
+[node name="Statue7" parent="." instance=ExtResource( 25 )]
+position = Vector2( 6730.99, 1531.63 )

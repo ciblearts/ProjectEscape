@@ -11,7 +11,8 @@ func _process(_delta):
 		if closed == true:
 			$SoundOpen.play()
 			closed = false
-			yield(get_tree().create_timer(5),"timeout")
+			#yield(get_tree().create_timer(5),"timeout")
+			$Timer.start(5); yield($Timer, "timeout")
 			$AnimatedSprite.play()
 			if is_instance_valid(Player):
 				if Player.VEST == true:

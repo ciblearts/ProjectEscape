@@ -7,6 +7,7 @@
 [ext_resource path="res://scenes/objects/lamp_4.tscn" type="PackedScene" id=5]
 
 [node name="level 1 lights" type="Node2D"]
+position = Vector2( 0, -2 )
 
 [node name="level 1 chests" parent="." instance=ExtResource( 1 )]
 position = Vector2( 213.147, 552.748 )

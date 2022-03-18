@@ -31,7 +31,8 @@ func _process(_delta):
 				bullet_instance.apply_impulse(Vector2(), Vector2(bullet_speed, 0).rotated(rotation))
 				get_tree().get_root().add_child(bullet_instance)
 				can_fire = false
-				yield(get_tree().create_timer(fire_rate),"timeout")
+				#yield(get_tree().create_timer(fire_rate),"timeout")
+				$Timer.start(fire_rate); yield($Timer, "timeout")
 				can_fire = true
 
 func attack():

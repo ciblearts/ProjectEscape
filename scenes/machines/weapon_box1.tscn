@@ -44,3 +44,5 @@ frames = SubResource( 4 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( -0.594604, 63.028 )
 shape = SubResource( 1 )
+
+[node name="Timer" type="Timer" parent="."]
