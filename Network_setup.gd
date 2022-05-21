@@ -85,4 +85,4 @@ sync func switch_to_game() -> void:
 		if child.is_in_group("Player"):
 			child.update_shoot_mode(true)
 	
-	get_tree().change_scene("res://Game.tscn")
+	get_tree().change_scene("res://scenes/MainMenu/Game.tscn")

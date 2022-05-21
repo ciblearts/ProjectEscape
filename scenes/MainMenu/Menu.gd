@@ -21,7 +21,7 @@ func _on_Options_pressed():
 	SceneChanger.goto_scene("res://scenes/MainMenu/Options.tscn", self)
 
 func _on_Multiplayer_pressed():
-	#SceneChanger.goto_scene("res://scenes/MainMenu/Network_setup.tscn", self)
+	SceneChanger.goto_scene("res://scenes/MainMenu/Network_setup.tscn", self)
 	pass
 
 func _on_Practice_Level_pressed():

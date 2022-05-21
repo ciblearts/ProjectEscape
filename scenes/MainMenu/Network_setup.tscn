@@ -14,9 +14,6 @@
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Multiplayer_configure" type="Control" parent="."]
 margin_right = 1920.0
@@ -34,9 +31,8 @@ margin_right = -74.5137
 margin_bottom = 309.622
 rect_scale = Vector2( 3, 3 )
 custom_fonts/font = ExtResource( 9 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+align = 1
+placeholder_text = "Enter User Name"
 
 [node name="Create_server" parent="Multiplayer_configure" instance=ExtResource( 1 )]
 anchor_left = 0.5
@@ -86,7 +82,7 @@ __meta__ = {
 position = Vector2( -1293.86, 723.038 )
 
 [node name="room 5" parent="Node2D" instance=ExtResource( 6 )]
-position = Vector2( 2263.3, 827.228 )
+position = Vector2( 2117.15, 1028.82 )
 rotation = 1.5708
 
 [node name="room 6" parent="Node2D" instance=ExtResource( 7 )]

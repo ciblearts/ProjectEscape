@@ -1,5 +1,6 @@
 extends KinematicBody2D
 
+#onready var gun =  get_node("network_gun")
 onready var gun =  get_node("gun")
 var velocity = Vector2(0,0)
 
@@ -32,7 +33,7 @@ var machine
 
 func _ready():
 	$"/root/Global".register_player(self)
-	get_tree().connect("network_peer_connected", self, "_network_peer_connected")
+	get_tree().connect("network_peer_connected", self, "_network_peer_connected") #here error
 	username_text_instance = Global.instance_node_at_location(username_text, Persistent_nodes, global_position)
 	username_text_instance.player_following = self
 	
@@ -150,6 +151,10 @@ func _physics_process(_delta):
 		else:
 			if not tween.is_active():
 				move_and_slide(puppet_velocity * SPEED)
+	else:
+		#gun.puppet_rotation
+		pass
+
 
 func puppet_position_set(new_value) -> void:
 	puppet_position = new_value

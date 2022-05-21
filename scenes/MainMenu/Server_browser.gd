@@ -10,7 +10,7 @@ func _ready() -> void:
 	server_ip_text_edit.hide()
 
 func _on_Server_listener_new_server(serverInfo):
-	var server_node = Global.instance_node(load("res://Server_display.tscn"), server_container)
+	var server_node = Global.instance_node(load("res://scenes/MainMenu/Server_display.tscn"), server_container)
 	server_node.text = "%s - %s" % [serverInfo.ip, serverInfo.name]
 	server_node.ip_address = str(serverInfo.ip)
 

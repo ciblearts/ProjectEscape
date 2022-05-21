@@ -6,7 +6,6 @@
 [ext_resource path="res://sounds/GunReload.wav" type="AudioStream" id=4]
 [ext_resource path="res://assests/Player/walk (2).png" type="Texture" id=5]
 [ext_resource path="res://assests/Player/air.png" type="Texture" id=6]
-[ext_resource path="res://scenes/objects/gun.tscn" type="PackedScene" id=7]
 [ext_resource path="res://assests/Addons/vest.png" type="Texture" id=8]
 [ext_resource path="res://assests/Addons/head phone military.png" type="Texture" id=9]
 [ext_resource path="res://assests/Addons/cardboard box.png" type="Texture" id=10]
@@ -18,6 +17,7 @@
 [ext_resource path="res://scenes/characters/SoundSteps.gd" type="Script" id=16]
 [ext_resource path="res://sounds/VestBullet.wav" type="AudioStream" id=17]
 [ext_resource path="res://sounds/VestOn.wav" type="AudioStream" id=18]
+[ext_resource path="res://scenes/objects/network_gun.tscn" type="PackedScene" id=20]
 
 [sub_resource type="AtlasTexture" id=1]
 flags = 4
@@ -89,10 +89,7 @@ extents = Vector2( 92.0654, 7781.04 )
 radius = 187.633
 height = 89.0229
 
-[node name="gameboy" type="KinematicBody2D" groups=[
-"Net",
-"characters",
-]]
+[node name="gameboy" type="KinematicBody2D" groups=["Net", "characters"]]
 modulate = Color( 0.0862745, 0.0862745, 0.0862745, 1 )
 position = Vector2( 19183.7, 8116.04 )
 script = ExtResource( 2 )
@@ -184,8 +181,8 @@ shape = SubResource( 11 )
 [node name="ShakingCamera" parent="." instance=ExtResource( 14 )]
 zoom = Vector2( 2.5, 2.5 )
 
-[node name="gun" parent="." instance=ExtResource( 7 )]
-position = Vector2( -0.813179, 45.1876 )
+[node name="gun" parent="." instance=ExtResource( 20 )]
+position = Vector2( -7.57227, 63.2539 )
 
 [node name="Tween" type="Tween" parent="."]
 

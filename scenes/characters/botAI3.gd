@@ -81,6 +81,5 @@ func _on_player_detection_zone_body_exited(_body):
 func _on_AccessRange_area_exited(area):
 	get_parent().ACCESS = false
 
-
 func _on_Timer_timeout():
 	hide = false

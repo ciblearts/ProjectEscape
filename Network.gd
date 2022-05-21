@@ -69,7 +69,7 @@ func _server_disconnected() -> void:
 	reset_network_connection()
 	
 	if Global.ui != null:
-		var prompt = Global.instance_node(load("res://Simple_prompt.tscn"), Global.ui)
+		var prompt = Global.instance_node(load("res://scenes/MainMenu/Simple_prompt.tscn"), Global.ui)
 		prompt.set_text("Disconnected from server")
 
 func _client_connection_timeout():
@@ -78,7 +78,7 @@ func _client_connection_timeout():
 		
 		reset_network_connection()
 		
-		var connection_timeout_prompt = Global.instance_node(load("res://Simple_prompt.tscn"), get_tree().current_scene)
+		var connection_timeout_prompt = Global.instance_node(load("res://scenes/MainMenu/Simple_prompt.tscn"), get_tree().current_scene)
 		connection_timeout_prompt.set_text("Connection timed out")
 
 func _connection_failed():
@@ -89,7 +89,7 @@ func _connection_failed():
 	reset_network_connection()
 
 	if Global.ui != null:
-		var prompt = Global.instance_node(load("res://Simple_prompt.tscn"), Global.ui)
+		var prompt = Global.instance_node(load("res://scenes/MainMenu/Simple_prompt.tscn"), Global.ui)
 		prompt.set_text("Connection failed")
 
 func puppet_networked_object_name_index_set(new_value):
