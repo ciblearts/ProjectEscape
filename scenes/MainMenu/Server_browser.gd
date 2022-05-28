@@ -39,4 +39,5 @@ func _on_Join_server_pressed():
 	Network.join_server()
 
 func _on_Go_back_pressed():
-	get_tree().reload_current_scene()
+	get_tree().reload_current_scene() #E 0:00:13.624   reload_current_scene: Condition "!current_scene" is true. Returned: ERR_UNCONFIGURED
+

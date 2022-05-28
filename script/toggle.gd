@@ -20,12 +20,10 @@ func _process(delta):
 				closed = true
 
 func body_entered(body):
-	if body == "gameboy": 
-		print("yes")
+	if body == "gameboy":
 		area_entered = true	
 	
 func body_exited(body):
 	if body == "gameboy":
-		print("no")
 		area_entered = false
 

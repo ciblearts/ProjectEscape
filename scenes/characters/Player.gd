@@ -1,16 +1,17 @@
 extends KinematicBody2D
 
 #onready var gun =  get_node("network_gun")
-onready var gun =  get_node("gun")
+#onready var gun =  get_node("gun")
 var velocity = Vector2(0,0)
 
-var username_text = load("res://scenes/MainMenu/Usename_text.tscn")
+var username_text = load("res://scenes/MainMenu/Username_text.tscn")
 
 var username setget username_set
 var username_text_instance = null
 
 puppet var puppet_position = Vector2(0, 0) setget puppet_position_set
 puppet var puppet_velocity = Vector2()
+#puppet var puppet_rotation = 0
 puppet var puppet_username = "" setget puppet_username_set
 
 onready var tween = $Tween
@@ -25,18 +26,19 @@ var VEST = true
 
 var Picked = 0
 var SPEED = 350
-var GRAVITY = 35
+#var GRAVITY = 35
 var INERTIA = 350
 var LIFT = 0
 const JUMPFORCE = -1100
 var machine
 
 func _ready():
-	$"/root/Global".register_player(self)
+	#$"/root/Global".register_player(self)
 	get_tree().connect("network_peer_connected", self, "_network_peer_connected") #here error
 	username_text_instance = Global.instance_node_at_location(username_text, Persistent_nodes, global_position)
 	username_text_instance.player_following = self
 	
+	#update_shoot_mode(false)
 	Global.alive_players.append(self)
 	
 	yield(get_tree(),"idle_frame")
@@ -44,14 +46,19 @@ func _ready():
 		if is_network_master():
 			Global.player_master = self
 
-func _physics_process(_delta):
+func _process(_delta): #try removing physics
 	if username_text_instance != null:
 		username_text_instance.name = "username" + name
+		
 	if get_tree().has_network_peer():
 		if is_network_master():
+			var x_input = int(Input.is_action_pressed("right")) - int(Input.is_action_pressed("left"))
+			var y_input = int(Input.is_action_pressed("down")) - int(Input.is_action_pressed("up"))
+			
+			velocity = Vector2(x_input, y_input).normalized()
+			
+			"""
 			if ALIVE == false:
-				#print("game over")
-				#$ShakingCamera.
 				if username_text_instance != null:
 					username_text_instance.visible = false
 					
@@ -67,7 +74,7 @@ func _physics_process(_delta):
 
 			if Picked>0 :
 				$SoundReload.play()
-				gun.bullets = gun.bullets + Picked
+				#gun.bullets = gun.bullets + Picked
 				Picked = 0
 			
 			if Input.is_action_pressed("sprint"):
@@ -84,7 +91,7 @@ func _physics_process(_delta):
 					elif machine.ACCESS == true:
 						machine.ACCESS = false
 						machine.Player = 0
-			
+						
 			if ladder_on == true:
 				if Input.is_action_pressed("up"):
 					velocity.y = -SPEED
@@ -101,14 +108,16 @@ func _physics_process(_delta):
 				velocity.y = lerp(velocity.y,0,0.2)
 				velocity = move_and_slide(velocity, Vector2.UP, false, 4, 0.785398, false)
 
+			"""
+
 			if Input.is_action_just_pressed("cover"):
 				if cover == false:
-					$gun/Light2D.hide()
+					#$gun/Light2D.hide()
 					$SoundCardboard.play()
 					cover = true
 					$"cardboard box".show()
 				elif cover == true:
-					$gun/Light2D.show()
+					#$gun/Light2D.show()
 					$SoundCardboardOpen.play()
 					cover = false
 					$"cardboard box".hide()
@@ -123,8 +132,6 @@ func _physics_process(_delta):
 				$"head phone military".flip_h = false
 				
 			elif Input.is_action_pressed("left"):
-				#if is_on_floor():
-					#$SoundSteps.play_random()
 				velocity.x = -SPEED
 				$Sprite.play("walk")
 				$Sprite.flip_h = true
@@ -136,7 +143,7 @@ func _physics_process(_delta):
 			if not is_on_floor():
 				$Sprite.play("air")
 				
-			velocity.y = velocity.y + GRAVITY
+			#velocity.y = velocity.y + GRAVITY
 			
 			if Input.is_action_just_pressed("jump") and is_on_floor() :
 				velocity.y = JUMPFORCE
@@ -156,6 +163,14 @@ func _physics_process(_delta):
 		pass
 
 
+func lerp_angle(from, to, weight):
+	return from + short_angle_dist(from, to) * weight
+
+func short_angle_dist(from, to):
+	var max_angle = PI * 2
+	var difference = fmod(to - from, max_angle)
+	return fmod(2 * difference, max_angle) - difference
+
 func puppet_position_set(new_value) -> void:
 	puppet_position = new_value
 	
@@ -168,6 +183,7 @@ func on_lift(var lift):
 func of_lift():
 	LIFT = 0
 	
+"""
 func _body_entered_ladder():
 	GRAVITY = 0
 	ladder_on = true
@@ -175,6 +191,7 @@ func _body_entered_ladder():
 func _body_exited_ladder():
 	GRAVITY = 35
 	ladder_on = false
+"""
 
 func _body_entered_fan():
 		velocity.y = JUMPFORCE * 2
@@ -205,7 +222,6 @@ func vest(flag):
 		$SoundVestBullet.play()
 
 func _on_right_resetter_body_entered(_body):
-	print("right")
 	fall_left_reset()
 
 func _on_down_resetter_body_entered(_body):
@@ -213,7 +229,6 @@ func _on_down_resetter_body_entered(_body):
 	fall_y_reset()
 
 func _on_left_resetter_body_entered(_body):
-	print("left")
 	fall_right_reset()
 
 func _on_Access_range_area_entered(area):
@@ -240,11 +255,15 @@ func puppet_username_set(new_value) -> void:
 		if not is_network_master() and username_text_instance != null:
 			username_text_instance.text = puppet_username
 
+func _network_peer_connected(id) -> void:
+	rset_id(id, "puppet_username", username)
+
 func _on_Network_tick_rate_timeout():
 	if get_tree().has_network_peer():
 		if is_network_master():
 			rset_unreliable("puppet_position", global_position)
 			rset_unreliable("puppet_velocity", velocity)
+			#rset_unreliable("puppet_rotation", rotation)
 
 sync func update_position(pos):
 	global_position = pos
@@ -259,11 +278,12 @@ sync func enable() -> void:
 			Global.player_master = self
 	if not Global.alive_players.has(self):
 		Global.alive_players.append(self)
-		
+		"""
 sync func destroy() -> void:
 	username_text_instance.visible = false
 	visible = false
 	Global.alive_players.erase(self)
+	
 	if get_tree().has_network_peer():
 		if is_network_master():
 			Global.player_master = null
@@ -273,3 +293,4 @@ func _exit_tree():
 	if get_tree().has_network_peer():
 		if is_network_master():
 			Global.player_master = null
+"""

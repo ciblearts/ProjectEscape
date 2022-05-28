@@ -20,9 +20,6 @@ margin_top = 309.911
 margin_right = 270.045
 margin_bottom = 424.911
 rect_scale = Vector2( 5, 5 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Single Player" parent="VBoxContainer" instance=ExtResource( 1 )]
 margin_right = 73.0

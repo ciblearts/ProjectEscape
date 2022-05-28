@@ -34,7 +34,8 @@ func _process(delta):
 		if server_ip != '' and server_port > 0:
 			if not known_servers.has(server_ip):
 				var serverMessage = array_bytes.get_string_from_ascii()
-				var gameInfo = parse_json(serverMessage)
+				var gameInfo = parse_json(serverMessage) #E 0:01:03.065   call: Error parsing JSON at line 0: Unexpected character.
+
 				gameInfo.ip = server_ip
 				gameInfo.lastSeen = OS.get_unix_time()
 				known_servers[server_ip] = gameInfo

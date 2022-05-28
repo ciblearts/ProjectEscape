@@ -8,6 +8,8 @@
 
 [sub_resource type="Animation" id=1]
 resource_name = "Searching"
+length = 0.8
+loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:text")
 tracks/0/interp = 1
@@ -15,7 +17,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0.00232568, 0.300013, 0.613979, 0.895387 ),
+"times": PoolRealArray( 0.00232568, 0.3, 0.613979, 0.895387 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
 "values": [ "Searching For Servers", "Searching For Servers.", "Searching For Servers..", "Searching For Servers..." ]
@@ -27,9 +29,6 @@ anchor_bottom = 1.0
 margin_left = -0.629974
 margin_right = -0.630005
 script = ExtResource( 5 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Manual_setup" parent="." instance=ExtResource( 2 )]
 margin_left = 1485.27
@@ -54,16 +53,18 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -473.5
-margin_top = -50.5
-margin_right = 473.5
-margin_bottom = 50.5
+margin_left = -224.37
+margin_top = -58.0
+margin_right = -66.3701
+margin_bottom = -27.0
+rect_scale = Vector2( 3, 3 )
 custom_fonts/font = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Type_in_server_ip" parent="Server_ip_text_edit" instance=ExtResource( 1 )]
+visible = false
 margin_top = -141.5
 margin_bottom = -128.5
 
@@ -72,10 +73,11 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -472.5
-margin_top = 65.5
-margin_right = -282.5
-margin_bottom = 78.5
+margin_left = -190.623
+margin_top = 34.3333
+margin_right = -0.623322
+margin_bottom = 47.3333
+rect_scale = Vector2( 2, 2 )
 text = "Join Server"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
@@ -88,18 +90,16 @@ margin_top = -320.42
 margin_right = -472.658
 margin_bottom = -192.42
 rect_scale = Vector2( 5, 5 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Searching_for_servers" type="Label" parent="VBoxContainer"]
 margin_right = 320.0
 margin_bottom = 13.0
 custom_fonts/font = ExtResource( 3 )
-text = "Searching For Servers..."
+text = "Searching For Servers.."
 align = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="VBoxContainer/Searching_for_servers"]
+autoplay = "Searching"
 anims/Searching = SubResource( 1 )
 
 [node name="Server_listener" parent="." instance=ExtResource( 4 )]

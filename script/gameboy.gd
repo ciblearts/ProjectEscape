@@ -86,8 +86,6 @@ func _physics_process(_delta):
 			$"cardboard box".hide()
 	
 	if Input.is_action_pressed("right"):
-		#if is_on_floor():
-			#$SoundSteps.play_random()
 		velocity.x = SPEED
 		$Sprite.play("walk")
 		$Sprite.flip_h = false
@@ -95,8 +93,6 @@ func _physics_process(_delta):
 		$"head phone military".flip_h = false
 		
 	elif Input.is_action_pressed("left"):
-		#if is_on_floor():
-			#$SoundSteps.play_random()
 		velocity.x = -SPEED
 		$Sprite.play("walk")
 		$Sprite.flip_h = true
@@ -164,7 +160,6 @@ func vest(flag):
 		$SoundVestBullet.play()
 
 func _on_right_resetter_body_entered(_body):
-	print("right")
 	fall_left_reset()
 
 func _on_down_resetter_body_entered(_body):
@@ -172,7 +167,6 @@ func _on_down_resetter_body_entered(_body):
 	fall_y_reset()
 
 func _on_left_resetter_body_entered(_body):
-	print("left")
 	fall_right_reset()
 
 func _on_Access_range_area_entered(area):

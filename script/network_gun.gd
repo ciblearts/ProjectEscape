@@ -17,7 +17,6 @@ func _process(_delta):
 		$gun.flip_v = true
 		$BulletPoint.position = Vector2(180,35)
 	if Input.is_action_pressed("fire") and can_fire and bullets > 0 :
-		print(bullets)
 		#$ShakingCamera.shake = true
 		$SoundShot.play()
 		bullets = bullets - 1

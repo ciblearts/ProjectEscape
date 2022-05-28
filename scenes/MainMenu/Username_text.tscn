@@ -3,7 +3,7 @@
 [ext_resource path="res://Usename_text.gd" type="Script" id=1]
 [ext_resource path="res://assests/Fonts/m5x7_16.tres" type="DynamicFont" id=2]
 
-[node name="Usename_text" type="Node2D" groups=["Net"]]
+[node name="Username_text" type="Node2D" groups=["Net"]]
 scale = Vector2( 5, 5 )
 script = ExtResource( 1 )
 
@@ -13,5 +13,6 @@ margin_top = -51.3137
 margin_right = 20.0891
 margin_bottom = -37.3137
 custom_fonts/font = ExtResource( 2 )
+text = "Null"
 align = 1
 valign = 1

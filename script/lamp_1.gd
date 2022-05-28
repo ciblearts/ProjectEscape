@@ -15,7 +15,6 @@ func _on_Area2D_body_entered(body):
 
 func _on_hit_box_body_entered(body):
 	if body.name == 'bullet' && broken == false:
-		print("bullet")
 		$break.play()
 		$AnimatedSprite.play()
 		$Light2D.hide()

@@ -111,22 +111,23 @@ position = Vector2( -1962.41, 1254.77 )
 [node name="Spawn_locations" type="Node" parent="."]
 
 [node name="1" type="Position2D" parent="Spawn_locations"]
-position = Vector2( 2976.83, 668.514 )
+position = Vector2( 161, 551 )
 
 [node name="2" type="Position2D" parent="Spawn_locations"]
-position = Vector2( 4965.65, 596.849 )
+position = Vector2( 865, 508 )
 
 [node name="3" type="Position2D" parent="Spawn_locations"]
-position = Vector2( 6874.23, 1767.96 )
+position = Vector2( 3571, -129 )
 
 [node name="4" type="Position2D" parent="Spawn_locations"]
-position = Vector2( 4012.57, 2885.44 )
+position = Vector2( 4295, 1311 )
 
 [node name="5" type="Position2D" parent="Spawn_locations"]
-position = Vector2( 2612.03, 2101.73 )
+position = Vector2( 466, 258 )
 
 [node name="6" type="Position2D" parent="Spawn_locations"]
-position = Vector2( 1179.8, 2041.57 )
+position = Vector2( 4819, 582 )
 
 [connection signal="pressed" from="Multiplayer_configure/Create_server" to="." method="_on_Create_server_pressed"]
 [connection signal="pressed" from="Multiplayer_configure/Join_server" to="." method="_on_Join_server_pressed"]
+[connection signal="pressed" from="UI/Start_game" to="." method="_on_Start_game_pressed"]

@@ -13,9 +13,6 @@ rect_scale = Vector2( 5, 5 )
 custom_fonts/font = ExtResource( 3 )
 text = "000.000.000"
 script = ExtResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Join_button" parent="." instance=ExtResource( 1 )]
 anchor_left = 1.0

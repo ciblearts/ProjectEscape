@@ -61,14 +61,14 @@ animations = [ {
 "name": "walk",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 4 ), SubResource( 5 ) ],
-"loop": true,
-"name": "climb",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 6 ), ExtResource( 1 ), ExtResource( 6 ) ],
 "loop": true,
 "name": "air",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 4 ), SubResource( 5 ) ],
+"loop": true,
+"name": "climb",
 "speed": 5.0
 } ]
 
@@ -89,9 +89,7 @@ extents = Vector2( 92.0654, 19384.5 )
 radius = 187.633
 height = 89.0229
 
-[node name="gameboy" type="KinematicBody2D" groups=[
-"characters",
-]]
+[node name="gameboy" type="KinematicBody2D" groups=["characters"]]
 position = Vector2( 19183.7, 8116.04 )
 script = ExtResource( 2 )
 

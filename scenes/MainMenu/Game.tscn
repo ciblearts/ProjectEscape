@@ -13,24 +13,24 @@ script = ExtResource( 2 )
 
 [node name="level 1 lights2" parent="." instance=ExtResource( 3 )]
 
-[node name="Spawn_loctions" type="Node" parent="."]
+[node name="Spawn_locations" type="Node" parent="."]
 
-[node name="1" type="Position2D" parent="Spawn_loctions"]
+[node name="1" type="Position2D" parent="Spawn_locations"]
 position = Vector2( 3550.55, 1772.3 )
 
-[node name="2" type="Position2D" parent="Spawn_loctions"]
+[node name="2" type="Position2D" parent="Spawn_locations"]
 position = Vector2( 10020.1, 1418.96 )
 
-[node name="3" type="Position2D" parent="Spawn_loctions"]
+[node name="3" type="Position2D" parent="Spawn_locations"]
 position = Vector2( 2990.28, 5552.73 )
 
-[node name="4" type="Position2D" parent="Spawn_loctions"]
+[node name="4" type="Position2D" parent="Spawn_locations"]
 position = Vector2( 17256.5, 5658.17 )
 
-[node name="5" type="Position2D" parent="Spawn_loctions"]
+[node name="5" type="Position2D" parent="Spawn_locations"]
 position = Vector2( 10303.1, 13653.7 )
 
-[node name="6" type="Position2D" parent="Spawn_loctions"]
+[node name="6" type="Position2D" parent="Spawn_locations"]
 position = Vector2( 14863.3, 10969.2 )
 
 [node name="UI" type="CanvasLayer" parent="."]
