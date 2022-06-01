@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://scenes/levels/PlacePlayerWorld.gd" type="Script" id=1]
 [ext_resource path="res://assests/Environment/background.png" type="Texture" id=2]
 [ext_resource path="res://sounds/Down Hearted Blues 1923.wav" type="AudioStream" id=3]
+[ext_resource path="res://MobileControls.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/levels/level 1 lights.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/characters/bot3.tscn" type="PackedScene" id=6]
 
@@ -54,3 +55,5 @@ position = Vector2( 11542.3, 6485.94 )
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color( 0.0862745, 0.0862745, 0.0862745, 1 )
+
+[node name="MobileControls" parent="." instance=ExtResource( 4 )]
